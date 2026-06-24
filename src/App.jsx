@@ -177,8 +177,8 @@ const NAV_LINKS = [
       { label: "Smart Meeting Room", page: "/products/smart-meeting-room" },
       { label: "Energy Management", page: "/products/energy-management-application" },
       { label: "People Counting Application", page: "/products/people-counting-application" },
-      { label: "Fault Detection", page: "/products/fault-detection-diagnosis" },
-      { label: "Fault Detection AI", page: "/products/ai-based-fault-detection-diagnosis" },
+      // { label: "FDD", page: "/products/fault-detection-diagnosis" },
+      { label: "FDD Using AI", page: "/products/ai-based-fault-detection-diagnosis" },
       { label: "Google Analytics", page: "/products/google-analytics" },
     ]
   },
@@ -382,14 +382,14 @@ const PRODUCTS = [
   {
     slug: "fault-detection-diagnosis",
     icon: AlertCircle,
-    title: "Fault Detection & Monitoring System",
+    title: "Fault Detection & Diagnosis System",
     category: "Monitoring",
     short: "Real-time monitoring with manual control.",
     desc: "System that detects abnormal conditions like temperature variations and alerts operators for manual intervention.",
 
     details: [
       {
-        content: "The Fault Detection and Monitoring System is designed to continuously track operational parameters such as temperature, load, and environmental conditions in critical systems. Many devices, including servers and industrial machinery, must operate within specific thresholds to ensure stability and performance. This platform provides real-time visibility into these parameters."
+        content: "The Fault Detection and Diagnosis System is designed to continuously track operational parameters such as temperature, load, and environmental conditions in critical systems. Many devices, including servers and industrial machinery, must operate within specific thresholds to ensure stability and performance. This platform provides real-time visibility into these parameters."
       },
       {
         content: "The system collects data from sensors and monitoring tools, analyzing it to detect abnormal conditions such as overheating, excessive load, or environmental fluctuations. When these anomalies are identified, the system generates immediate alerts, enabling operators to take corrective action."
@@ -439,14 +439,14 @@ const PRODUCTS = [
   {
     slug: "ai-based-fault-detection-diagnosis",
     icon: Brain,
-    title: "AI-Based Fault Detection & Intelligent Control",
+    title: "AI-Based Fault Detection & Diagnosis ",
     category: "AI Automation",
     short: "Predictive fault detection with automated system optimization.",
     desc: "AI-driven system that predicts failures and dynamically adjusts operating conditions such as temperature for optimal performance.",
 
     details: [
       {
-        content: "The AI-Based Fault Detection and Intelligent Control system is designed to ensure optimal operation of critical infrastructure such as servers, industrial equipment, and energy systems. In many environments, devices must operate within specific temperature and performance thresholds to maintain efficiency and prevent damage. This platform leverages artificial intelligence to continuously monitor these parameters and automatically maintain optimal conditions."
+        content: "The AI-Based Fault Detection and Diagnosis  system is designed to ensure optimal operation of critical infrastructure such as servers, industrial equipment, and energy systems. In many environments, devices must operate within specific temperature and performance thresholds to maintain efficiency and prevent damage. This platform leverages artificial intelligence to continuously monitor these parameters and automatically maintain optimal conditions."
       },
       {
         content: "The system collects real-time data from sensors, including temperature, load, and environmental conditions, and applies machine learning models to identify patterns and predict potential failures. Unlike traditional monitoring systems, it does not simply detect issues—it anticipates them before they occur."
