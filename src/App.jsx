@@ -707,7 +707,7 @@ function ProductsPage() {
                 </p>
 
                 {/* Tech Stack */}
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 24 }}>
+                {/* <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 24 }}>
                   {p.tech.slice(0, 3).map(t => (
                     <span key={t} style={{
                       fontSize: 12,
@@ -731,7 +731,7 @@ function ProductsPage() {
                       opacity: 0.7
                     }}>+{p.tech.length - 3} more</span>
                   )}
-                </div>
+                </div> */}
 
                 {/* Metrics Preview */}
                 <div style={{
@@ -1607,27 +1607,37 @@ function HomePage() {
   {
     name: "Four Corners Technologies",
     project: "AI-Based Fault Detection System",
-    logo: "https://www.fourcorners.asia/wp-content/uploads/2017/09/final-logo.png"
+    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
+  },
+  {
+    name: "Arrow Access ",
+    project: "Arrow Access Portfolio",
+    logo: "https://www.fourcorners/assets/logo-44Hu2BF3.png"
+  },
+  {
+    name: "Kairavi Montessori ",
+    project: "Montessori Application",
+    logo: "https://static.wixstatic.com/media/9981f8_6b4eda152c3c46849c03a456834418c9~mv2.png/v1/fill/w_342,h_186,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9981f8_6b4eda152c3c46849c03a456834418c9~mv2.png"
   },
   {
     name: "Four Corners Technologies",
     project: "Asset Management Platform",
-    logo: "https://www.fourcorners.asia/wp-content/uploads/2017/09/final-logo.png"
+    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
   },
   {
     name: "Four Corners Technologies",
     project: "People Counting Analytics",
-    logo: "https://www.fourcorners.asia/wp-content/uploads/2017/09/final-logo.png"
+    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
   },
   {
     name: "Four Corners Technologies",
     project: "Energy Monitoring System",
-    logo: "https://www.fourcorners.asia/wp-content/uploads/2017/09/final-logo.png"
+    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
   },
   {
     name: "Four Corners Technologies",
     project: "Analytics Dashboard Integration",
-    logo: "https://www.fourcorners.asia/wp-content/uploads/2017/09/final-logo.png"
+    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
   }
 ];
   const navigate = useNavigate();
@@ -1713,27 +1723,23 @@ useEffect(() => {
   <div className="impact-grid">
 
     {[
-      {
-        value: "50%+",
-        title: "Operational Efficiency",
-        desc: "We help businesses streamline operations and reduce inefficiencies through intelligent systems."
-      },
-      {
-        value: "2X",
-        title: "Faster Decision Making",
-        desc: "Real-time data and analytics empower teams to make faster, smarter decisions."
-      },
-      {
-        value: "99.9%",
-        title: "System Reliability",
-        desc: "Robust architectures ensure consistent performance and minimal downtime."
-      },
-      {
-        value: "40%+",
-        title: "Cost Optimization",
-        desc: "Optimized infrastructure and automation reduce operational and maintenance costs."
-      }
-    ].map((item, i) => (
+  {
+    title: "Understand Before We Build",
+    desc: "We take time to understand your operations, challenges, and goals before recommending solutions."
+  },
+  {
+    title: "Solutions Tailored To Your Needs",
+    desc: "Every business is different. We design systems around your processes rather than forcing you to adapt to generic software."
+  },
+  {
+    title: "Technology That Delivers Results",
+    desc: "Our focus is on creating systems that improve productivity, visibility, automation, and decision-making."
+  },
+  {
+    title: "Support Beyond Launch",
+    desc: "We remain involved after deployment, ensuring your solution continues to perform and evolve with your business."
+  }
+].map((item, i) => (
       <div key={i} className="impact-card">
         <h2>{item.value}</h2>
         <h3>{item.title}</h3>
@@ -1744,6 +1750,56 @@ useEffect(() => {
   </div>
 
 </section>
+      {/* WHY */}
+      <section className="why-section">
+        <div className="container">
+          <h2 className="section-title">Why Choose Us</h2>
+
+          <div className="why-grid">
+            {[
+              {
+                title: "Scalable Architecture",
+                desc: "Systems designed to grow with your business without performance bottlenecks."
+              },
+              {
+                title: "Modern Technologies",
+                desc: "We use cutting-edge tools to ensure speed, reliability, and maintainability."
+              },
+              {
+                title: "Business Impact",
+                desc: "Every solution is built with measurable outcomes and ROI in mind."
+              }
+            ].map((item, i) => (
+              <div key={i} className="why-card">
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+  {/* PROCESS */}
+      <section className="process-section">
+        <div className="container">
+          <h2 className="section-title mt-5">How We Work</h2>
+
+          <div className="process-grid">
+            {[
+              { step: "01", title: "Understand", desc: "Analyze business needs deeply." },
+              { step: "02", title: "Design", desc: "Architect scalable systems." },
+              { step: "03", title: "Develop", desc: "Build robust solutions." },
+              { step: "04", title: "Deploy", desc: "Launch and optimize." }
+            ].map((p, i) => (
+              <div key={i} className="process-card">
+                <div className="step">{p.step}</div>
+                <h4>{p.title}</h4>
+                <p>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 <section className="home-section">
 
   <h2 className="section-title">Trusted By Leading Teams</h2>
@@ -1825,7 +1881,7 @@ function AboutPage() {
         </p>
       </div>
 
-      <section style={{ padding: "80px 24px", maxWidth: 1120, margin: "0 auto" }}>
+      {/*<section style={{ padding: "80px 24px", maxWidth: 1120, margin: "0 auto" }}>
         <h2 className="section-title">Our Story</h2>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", marginBottom: 48 }}>
           {["Established 3 Years Ago", "5 Dedicated Professionals", "15+ Years Leadership Experience", "End-to-End Technology Solutions"].map(b => (<span key={b} className="badge">{b}</span>
@@ -1846,7 +1902,8 @@ function AboutPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section>*/}
+
 
       {/* Leadership */}
       {/* <section style={{ background: "linear-gradient(180deg,#f7f7fd,#eef0fb)", padding: "80px 24px" }}>
@@ -1880,7 +1937,7 @@ function AboutPage() {
 const SERVICES = [
   {
     icon: Code,
-    title: "Custom Web Development",
+    title: "Application Development",
     desc: "We design and engineer high-performance, scalable web applications tailored to modern business needs. Leveraging technologies like React, Node.js, and Python, we build responsive and secure platforms that deliver seamless user experiences. From internal enterprise tools to customer-facing applications, our solutions are optimized for performance, reliability, and long-term scalability.",
     tags: ["React", "Node.js", "Python", "Full-Stack"]
   },
@@ -1890,13 +1947,6 @@ const SERVICES = [
     title: "Data Engineering",
     desc: "We build robust data infrastructures that enable organizations to collect, process, and manage large volumes of data efficiently. Our solutions include scalable data pipelines, ETL processes, API integrations, and optimized database architectures. We ensure data flows seamlessly across systems, enabling faster decision-making and reliable business operations.",
     tags: ["Data Pipelines", "ETL", "APIs", "Database Design"]
-  },
-
-  {
-    icon: Settings,
-    title: "Backend Development & APIs",
-    desc: "Our backend systems are designed for performance, scalability, and security. We develop RESTful APIs, authentication systems, and database architectures that power modern applications. With a focus on clean architecture and maintainability, we ensure your backend can scale seamlessly as your business grows.",
-    tags: ["REST APIs", "Authentication", "Database Design", "Security"]
   },
 
   {
@@ -1925,13 +1975,6 @@ const SERVICES = [
     title: "Application Maintenance & Support",
     desc: "We provide continuous support and maintenance to ensure your applications remain secure, optimized, and up-to-date. From performance tuning and bug fixes to feature enhancements, we help your systems evolve alongside your business requirements without disruption.",
     tags: ["Upgrades", "Bug Fixes", "Optimization", "Support"]
-  },
-
-  {
-    icon: Rocket,
-    title: "End-to-End Project Delivery",
-    desc: "We deliver complete technology solutions from concept to deployment. Our structured approach covers requirement analysis, system design, development, testing, and launch. With clear communication and disciplined execution, we ensure every project is delivered on time, within scope, and aligned with business goals.",
-    tags: ["Planning", "Execution", "Testing", "Launch"]
   }
 ];
 function ServicesPage() {
@@ -1985,9 +2028,9 @@ function ServicesPage() {
 
                   <p className="desc">{s.desc}</p>
 
-                  <div className="tags">
+                  {/* <div className="tags">
                     {s.tags.map(t => <span key={t}>{t}</span>)}
-                  </div>
+                  </div> */}
 
                 </div>
 
@@ -1997,57 +2040,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* WHY */}
-      <section className="why-section">
-        <div className="container">
-          <h2 className="section-title">Why Choose Us</h2>
-
-          <div className="why-grid">
-            {[
-              {
-                title: "Scalable Architecture",
-                desc: "Systems designed to grow with your business without performance bottlenecks."
-              },
-              {
-                title: "Modern Technologies",
-                desc: "We use cutting-edge tools to ensure speed, reliability, and maintainability."
-              },
-              {
-                title: "Business Impact",
-                desc: "Every solution is built with measurable outcomes and ROI in mind."
-              }
-            ].map((item, i) => (
-              <div key={i} className="why-card">
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PROCESS */}
-      <section className="process-section">
-        <div className="container">
-          <h2 className="section-title">How We Work</h2>
-
-          <div className="process-grid">
-            {[
-              { step: "01", title: "Understand", desc: "Analyze business needs deeply." },
-              { step: "02", title: "Design", desc: "Architect scalable systems." },
-              { step: "03", title: "Develop", desc: "Build robust solutions." },
-              { step: "04", title: "Deploy", desc: "Launch and optimize." }
-            ].map((p, i) => (
-              <div key={i} className="process-card">
-                <div className="step">{p.step}</div>
-                <h4>{p.title}</h4>
-                <p>{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+    
     </div>
   );
 }
