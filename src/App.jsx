@@ -233,14 +233,14 @@ const PRODUCTS = [
     ],
 
     features: [
-      { name: "Real-Time Tracking", icon: "📍" },
+      { name: "Real-Time Tracking", icon: "⚙️" },
       { name: "Predictive Analytics", icon: "📊" },
       { name: "Maintenance Scheduling", icon: "⏰" },
       { name: "Multi-Location Support", icon: "🌍" }
     ],
 
     useCases: ["Enterprise", "Manufacturing", "Healthcare", "Retail"],
-    tech: ["React", "Node.js", "AWS", "PostgreSQL", "Analytics Engine"]
+    tech: ["React", "Node.js", "AWS"]
   },
 
   /* ───────────────────────────── */
@@ -493,99 +493,99 @@ const PRODUCTS = [
   /* ───────────────────────────── */
   /* 7. GOOGLE ANALYTICS */
   /* ───────────────────────────── */
-  {
-    slug: "google-analytics",
-    icon: BarChart3,
-    title: "Google Analytics & Digital Intelligence Platform",
-    category: "Analytics",
-    short: "Advanced analytics, tracking, and business intelligence platform.",
-    desc: "Comprehensive analytics solution that transforms user behavior, traffic, and performance data into actionable business intelligence.",
+ {
+  slug: "google-analytics",
+  icon: BarChart3,
+  title: "Google Analytics & Digital Intelligence ",
+  category: "Business Intelligence",
+  short: "Centralized energy monitoring and reporting platform powered by Google Looker Studio.",
+  desc: "A data-driven energy management solution that collects energy consumption data, processes key metrics, and visualizes performance through interactive Google Looker Studio dashboards.",
 
-    details: [
-      {
-        content: "The Google Analytics & Digital Intelligence Platform is a comprehensive solution designed to provide deep visibility into user behavior, engagement patterns, and digital performance across websites and applications. In today’s competitive digital landscape, understanding how users interact with your platform is essential for optimizing experiences and driving business growth. This solution goes beyond basic tracking by transforming raw data into meaningful, actionable insights."
-      },
-      {
-        content: "The platform collects and processes large volumes of user interaction data, including traffic sources, session behavior, user journeys, and conversion events. By integrating seamlessly with your digital ecosystem, it creates a unified view of performance across multiple channels such as web, mobile, and marketing campaigns. This enables organizations to understand not just what users are doing, but why they are doing it."
-      },
-      {
-        content: "Advanced analytics dashboards and visualization tools allow teams to monitor key performance indicators in real time. Businesses can identify high-performing channels, detect drop-off points in user journeys, and optimize conversion funnels with precision. This leads to improved customer engagement, better marketing efficiency, and increased revenue generation."
-      },
-      {
-        content: "The platform also enables data-driven decision-making by providing predictive insights and trend analysis. Organizations can forecast user behavior, measure campaign effectiveness, and continuously refine their strategies to achieve better outcomes. By bridging the gap between raw data and business decisions, the system empowers teams to operate with clarity and confidence."
-      }
-    ],
+  details: [
+    {
+      content: "The Google Analytics Application was developed to provide organizations with clear visibility into their energy consumption patterns through centralized monitoring and reporting. By integrating operational energy data into Google Looker Studio, the platform transforms raw records into meaningful dashboards that support informed decision-making and sustainability initiatives."
+    },
+    {
+      content: "The solution collects energy-related data from multiple sources and processes it into structured datasets. These datasets are then pushed to Google Looker Studio, where interactive dashboards provide real-time and historical insights into energy usage, consumption trends, efficiency metrics, and operational performance."
+    },
+    {
+      content: "With customizable visualizations and KPI tracking, stakeholders can easily monitor energy consumption across different facilities, departments, or equipment. The dashboards help identify usage patterns, detect inefficiencies, and support efforts to reduce energy waste and operational costs."
+    },
+    {
+      content: "By leveraging Google Looker Studio's powerful reporting capabilities, the application enables automated reporting, executive-level summaries, and data-driven analysis. This allows organizations to improve energy efficiency, track sustainability goals, and make proactive operational decisions based on accurate and accessible data."
+    }
+  ],
 
-    metrics: [
-      { value: "3X", label: "Increase in Data Visibility" },
-      { value: "45%+", label: "Improvement in Conversion Rates" },
-      { value: "35%+", label: "Increase in Marketing ROI" },
-      { value: "2X", label: "Faster Decision Making" }
-    ],
+  metrics: [
+    { value: "100%", label: "Centralized Energy Data" },
+    { value: "24/7", label: "Dashboard Availability" },
+    { value: "Real-Time", label: "Performance Monitoring" },
+    { value: "Interactive", label: "Reporting & Insights" }
+  ],
 
-    highlights: [
-      {
-        title: "End-to-End User Tracking",
-        desc: "Track complete user journeys across web and mobile platforms."
-      },
-      {
-        title: "Advanced Analytics & Insights",
-        desc: "Transform raw data into meaningful business intelligence."
-      },
-      {
-        title: "Conversion Optimization",
-        desc: "Identify and improve key conversion touchpoints."
-      },
-      {
-        title: "Real-Time Performance Monitoring",
-        desc: "Access live dashboards for instant decision-making."
-      }
-    ],
+  highlights: [
+    {
+      title: "Energy Consumption Monitoring",
+      desc: "Track and analyze energy usage across multiple sources."
+    },
+    {
+      title: "Google Looker Studio Integration",
+      desc: "Visualize data through dynamic dashboards and reports."
+    },
+    {
+      title: "KPI & Trend Analysis",
+      desc: "Monitor key energy performance indicators and consumption trends."
+    },
+    {
+      title: "Automated Reporting",
+      desc: "Generate actionable insights through centralized reporting."
+    }
+  ],
 
-    steps: [
-      {
-        title: "Collect Data",
-        desc: "Capture user interactions, traffic sources, and engagement metrics."
-      },
-      {
-        title: "Process & Integrate",
-        desc: "Aggregate and unify data across platforms and channels."
-      },
-      {
-        title: "Analyze Behavior",
-        desc: "Understand user journeys, patterns, and drop-off points."
-      },
-      {
-        title: "Optimize Strategy",
-        desc: "Improve campaigns, UX, and conversions using insights."
-      }
-    ],
+  steps: [
+    {
+      title: "Collect Data",
+      desc: "Gather energy consumption data from operational sources."
+    },
+    {
+      title: "Process & Transform",
+      desc: "Clean, structure, and prepare datasets for reporting."
+    },
+    {
+      title: "Push to Looker Studio",
+      desc: "Integrate processed data with Google Looker Studio."
+    },
+    {
+      title: "Visualize & Analyze",
+      desc: "Monitor KPIs, trends, and energy performance through dashboards."
+    }
+  ],
 
-    features: [
-      { name: "Real-Time Dashboards", icon: "📊" },
-      { name: "User Journey Tracking", icon: "🧭" },
-      { name: "Conversion Funnel Analysis", icon: "📉" },
-      { name: "Custom Reports & KPIs", icon: "📋" },
-      { name: "Multi-Channel Attribution", icon: "🔗" },
-      { name: "Predictive Insights", icon: "🔮" }
-    ],
+  features: [
+    { name: "Interactive Dashboards", icon: "📊" },
+    { name: "Energy KPI Tracking", icon: "⚡" },
+    { name: "Trend Analysis", icon: "📈" },
+    { name: "Custom Reports", icon: "📋" },
+    { name: "Data Integration", icon: "🔗" },
+    { name: "Executive Insights", icon: "📑" }
+  ],
 
-    useCases: [
-      "Digital Marketing Optimization",
-      "E-commerce Conversion Tracking",
-      "User Experience Analysis",
-      "Campaign Performance Measurement",
-      "Product Analytics"
-    ],
+  useCases: [
+    "Energy Consumption Monitoring",
+    "Utility Usage Analysis",
+    "Operational Performance Tracking",
+    "Sustainability Reporting",
+    "Management Dashboards"
+  ],
 
-    tech: [
-      "Google Analytics 4",
-      "Tag Manager",
-      "BigQuery",
-      "Data Studio / Looker",
-      "APIs & Integrations"
-    ]
-  }
+  tech: [
+    "Google Looker Studio",
+    "Google Sheets / Data Connectors",
+    "REST APIs",
+    "Data Processing Pipelines",
+    "Business Intelligence Reporting"
+  ]
+}
 ];
 
 function ProductsPage() {
@@ -775,7 +775,7 @@ function ProductsPage() {
                   fontWeight: 600,
                   color: hoveredProduct === idx ? "#fff" : "#3B3FB5"
                 }}>
-                  Learn More →
+                  See More →
                 </div>
               </div>
             </div>
@@ -1294,7 +1294,7 @@ function Navbar({ currentPage }) {
                       }}
                       style={{
                         padding: "13px 22px",
-                        margin: "4px 10px",
+                        margin: "4px 0px",
                         borderRadius: 12,
                         fontSize: 14,
                         fontWeight: 500,
