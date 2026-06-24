@@ -13,6 +13,28 @@ import {
   Brain,
   BarChart3
 } from "lucide-react";
+import {
+  FaBoxes,
+  FaChartLine,
+  FaTools,
+  FaMapMarkedAlt,
+  FaCalendarAlt,
+  FaDoorOpen,
+  FaUsers,
+  FaBolt,
+  FaLeaf,
+  FaBrain,
+  FaExclamationTriangle,
+  FaThermometerHalf,
+  FaBell,
+  FaChartBar,
+  FaDatabase,
+  FaProjectDiagram,
+  FaRobot,
+  FaCogs,
+  FaEye,
+  FaSearch
+} from "react-icons/fa";
 import './App.css'
 import { Routes, Route, useNavigate, useParams, useLocation } from "react-router-dom";
 
@@ -205,12 +227,21 @@ const PRODUCTS = [
     short: "Enterprise-grade platform for managing asset lifecycle.",
     desc: "Comprehensive enterprise solution for complete visibility and control over organizational assets.",
 
-    details: [
-      { content: "The Asset Management Application is a comprehensive enterprise platform designed to provide complete visibility, control, and intelligence over organizational assets across their entire lifecycle. In large-scale environments, assets are distributed across departments, locations, and operational units, making manual tracking inefficient and prone to errors. This solution centralizes all asset-related data into a unified digital system, enabling organizations to monitor asset status, location, performance, and lifecycle stage in real time." },
-      { content: "The platform goes beyond traditional inventory systems by introducing intelligent lifecycle management. From procurement and onboarding to maintenance and retirement, every stage is optimized through automation and structured workflows. This ensures that organizations not only track assets but also maximize their utilization and operational efficiency." },
-      { content: "One of the most powerful capabilities is predictive maintenance. By analyzing historical data and usage patterns, the system can anticipate failures before they occur, reducing downtime and extending asset lifespan. This proactive approach minimizes disruptions and ensures business continuity." },
-      { content: "With advanced analytics and reporting, organizations gain insights into asset performance, cost optimization, and resource allocation. The platform enables data-driven decision-making that improves efficiency and reduces unnecessary expenditure across operations." }
-    ],
+   details: [
+  {
+    content: "A centralized platform for managing and tracking organizational assets throughout their lifecycle. It provides complete visibility into asset location, status, maintenance, and utilization."
+  },
+  {
+    content: "The system improves operational efficiency through real-time monitoring, automated workflows, and insightful reporting for better asset management."
+  }
+],
+
+features: [
+  { name: "Asset Tracking", icon: FaBoxes },
+  { name: "Analytics", icon: FaChartLine },
+  { name: "Maintenance Management", icon: FaTools },
+  { name: "Location Tracking", icon: FaMapMarkedAlt }
+],
 
     metrics: [
       { value: "48%", label: "Downtime Reduction" },
@@ -232,12 +263,12 @@ const PRODUCTS = [
       { title: "Optimize", desc: "Improve efficiency and reduce cost." }
     ],
 
-    features: [
-      { name: "Real-Time Tracking", icon: "⚙️" },
-      { name: "Predictive Analytics", icon: "📊" },
-      { name: "Maintenance Scheduling", icon: "⏰" },
-      { name: "Multi-Location Support", icon: "🌍" }
-    ],
+    // features: [
+    //   { name: "Real-Time Tracking", icon: "⚙️" },
+    //   { name: "Predictive Analytics", icon: "📊" },
+    //   { name: "Maintenance Scheduling", icon: "⏰" },
+    //   { name: "Multi-Location Support", icon: "🌍" }
+    // ],
 
     useCases: ["Enterprise", "Manufacturing", "Healthcare", "Retail"],
     tech: ["React", "Node.js", "AWS"]
@@ -255,11 +286,20 @@ const PRODUCTS = [
     desc: "Intelligent platform to optimize workspace collaboration.",
 
     details: [
-      { content: "The Smart Meeting Room solution is designed to transform how organizations manage and utilize collaborative spaces. In modern workplaces, inefficient room usage, scheduling conflicts, and lack of visibility can reduce productivity. This platform introduces automation and real-time intelligence to optimize meeting room utilization." },
-      { content: "By integrating with calendar systems and IoT devices, employees can seamlessly find, book, and access meeting rooms. Automated check-ins and smart scheduling eliminate conflicts and ensure efficient resource utilization." },
-      { content: "The system provides analytics on room usage, enabling organizations to identify underutilized spaces and optimize office layouts. This leads to better planning and improved workspace efficiency." },
-      { content: "With real-time monitoring and automation, organizations can create a smarter, more adaptive workplace that aligns with modern hybrid work environments." }
-    ],
+  {
+    content: "An intelligent meeting room solution that simplifies room booking, scheduling, and workspace management through automation."
+  },
+  {
+    content: "It improves room utilization, eliminates scheduling conflicts, and provides real-time visibility into workspace usage."
+  }
+],
+
+features: [
+  { name: "Room Booking", icon: FaCalendarAlt },
+  { name: "Access Control", icon: FaDoorOpen },
+  { name: "Occupancy Tracking", icon: FaUsers },
+  { name: "Usage Analytics", icon: FaChartBar }
+],
 
     metrics: [
       { value: "52%", label: "Room Utilization Increase" },
@@ -280,12 +320,12 @@ const PRODUCTS = [
       { title: "Optimize", desc: "Analyze usage patterns." }
     ],
 
-    features: [
-      { name: "Smart Booking", icon: "📅" },
-      { name: "Calendar Integration", icon: "🔗" },
-      { name: "Occupancy Tracking", icon: "👥" },
-      { name: "Analytics Dashboard", icon: "📈" }
-    ],
+    // features: [
+    //   { name: "Smart Booking", icon: "📅" },
+    //   { name: "Calendar Integration", icon: "🔗" },
+    //   { name: "Occupancy Tracking", icon: "👥" },
+    //   { name: "Analytics Dashboard", icon: "📈" }
+    // ],
 
     useCases: ["Corporate Offices", "Hybrid Workspaces"],
     tech: ["React", "IoT", "Azure"]
@@ -303,11 +343,20 @@ const PRODUCTS = [
     desc: "Platform to monitor and optimize energy consumption.",
 
     details: [
-      { content: "The Energy Management Application enables organizations to monitor and optimize energy consumption across facilities. Rising energy costs and sustainability demands require deeper insights into usage patterns." },
-      { content: "The platform collects real-time data from IoT devices and provides insights into consumption trends. Organizations can identify inefficiencies and reduce waste." },
-      { content: "AI-driven analytics predict future consumption and recommend optimization strategies. This reduces cost while improving sustainability." },
-      { content: "Centralized dashboards enable multi-location monitoring and consistent energy management practices." }
-    ],
+  {
+    content: "A platform that monitors energy consumption and provides visibility into usage patterns across facilities and operations."
+  },
+  {
+    content: "Interactive dashboards help organizations optimize energy usage, reduce costs, and achieve sustainability goals."
+  }
+],
+
+features: [
+  { name: "Energy Monitoring", icon: FaBolt },
+  { name: "Consumption Analytics", icon: FaChartLine },
+  { name: "Sustainability Tracking", icon: FaLeaf },
+  { name: "Reporting Dashboard", icon: FaChartBar }
+],
 
     metrics: [
       { value: "42%", label: "Energy Savings" },
@@ -325,11 +374,7 @@ const PRODUCTS = [
       { title: "Optimize", desc: "Reduce waste." }
     ],
 
-    features: [
-      { name: "Real-Time Monitoring", icon: "⚡" },
-      { name: "Analytics", icon: "📊" }
-    ],
-
+   
     useCases: ["Buildings", "Factories"],
     tech: ["Python", "IoT", "AWS"]
   },
@@ -346,11 +391,20 @@ const PRODUCTS = [
     desc: "Track and analyze human movement patterns.",
 
     details: [
-      { content: "The People Counting Application uses AI and computer vision to analyze human movement patterns in real time. It helps organizations understand how people interact with spaces." },
-      { content: "The system tracks entry, exit, and occupancy levels, providing insights into peak hours and traffic patterns." },
-      { content: "Analytics dashboards visualize trends, helping improve layout planning and staffing decisions." },
-      { content: "The platform enhances operational efficiency and customer experience across industries." }
-    ],
+  {
+    content: "An AI-powered solution that tracks people movement and occupancy levels in real time across physical spaces."
+  },
+  {
+    content: "The platform provides insights into traffic patterns, peak hours, and space utilization to support operational planning."
+  }
+],
+
+features: [
+  { name: "Live Counting", icon: FaUsers },
+  { name: "Occupancy Insights", icon: FaEye },
+  { name: "Traffic Analytics", icon: FaChartLine },
+  { name: "Heatmap Analysis", icon: FaProjectDiagram }
+],
 
     metrics: [
       { value: "95%", label: "Accuracy" },
@@ -367,10 +421,7 @@ const PRODUCTS = [
       { title: "Analyze", desc: "Insights generation." }
     ],
 
-    features: [
-      { name: "Live Counting", icon: "👥" },
-      { name: "Heatmaps", icon: "🔥" }
-    ],
+    
 
     useCases: ["Retail", "Airports"],
     tech: ["AI", "OpenCV"]
@@ -388,19 +439,20 @@ const PRODUCTS = [
     desc: "System that detects abnormal conditions like temperature variations and alerts operators for manual intervention.",
 
     details: [
-      {
-        content: "The Fault Detection and Diagnosis System is designed to continuously track operational parameters such as temperature, load, and environmental conditions in critical systems. Many devices, including servers and industrial machinery, must operate within specific thresholds to ensure stability and performance. This platform provides real-time visibility into these parameters."
-      },
-      {
-        content: "The system collects data from sensors and monitoring tools, analyzing it to detect abnormal conditions such as overheating, excessive load, or environmental fluctuations. When these anomalies are identified, the system generates immediate alerts, enabling operators to take corrective action."
-      },
-      {
-        content: "Unlike AI-driven systems, this solution focuses on accurate detection and timely notification rather than automation. It ensures that human operators are informed with precise and actionable insights, allowing them to respond effectively to potential issues."
-      },
-      {
-        content: "This approach provides a reliable and controlled method for maintaining system stability, especially in environments where manual oversight is required. It reduces the risk of unexpected failures while giving organizations full control over operational decisions."
-      }
-    ],
+  {
+    content: "A monitoring solution that continuously tracks system conditions such as temperature and operational performance."
+  },
+  {
+    content: "The system detects abnormal events and sends instant alerts, helping operators respond quickly and prevent disruptions."
+  }
+],
+
+features: [
+  { name: "Condition Monitoring", icon: FaThermometerHalf },
+  { name: "Alert Management", icon: FaBell },
+  { name: "Live Dashboard", icon: FaChartBar },
+  { name: "Issue Tracking", icon: FaExclamationTriangle }
+],
 
     metrics: [
       { value: "60%+", label: "Reduction in Critical Failures" },
@@ -422,13 +474,7 @@ const PRODUCTS = [
       { title: "Respond", desc: "Manual corrective action taken." }
     ],
 
-    features: [
-      { name: "Temperature Monitoring", icon: "🌡️" },
-      { name: "Alert System", icon: "🚨" },
-      { name: "Live Dashboard", icon: "📊" },
-      { name: "System Logs", icon: "📁" }
-    ],
-
+    
     useCases: ["Data Centers", "Manufacturing", "Server Rooms"],
     tech: ["Node.js", "Monitoring Tools", "IoT Sensors"]
   },
@@ -444,20 +490,21 @@ const PRODUCTS = [
     short: "Predictive fault detection with automated system optimization.",
     desc: "AI-driven system that predicts failures and dynamically adjusts operating conditions such as temperature for optimal performance.",
 
-    details: [
-      {
-        content: "The AI-Based Fault Detection and Diagnosis  system is designed to ensure optimal operation of critical infrastructure such as servers, industrial equipment, and energy systems. In many environments, devices must operate within specific temperature and performance thresholds to maintain efficiency and prevent damage. This platform leverages artificial intelligence to continuously monitor these parameters and automatically maintain optimal conditions."
-      },
-      {
-        content: "The system collects real-time data from sensors, including temperature, load, and environmental conditions, and applies machine learning models to identify patterns and predict potential failures. Unlike traditional monitoring systems, it does not simply detect issues—it anticipates them before they occur."
-      },
-      {
-        content: "One of the most powerful capabilities is automated control. When the system detects a deviation from optimal conditions, such as rising temperature in a server environment, it can automatically trigger corrective actions. This may include adjusting cooling systems, redistributing workloads, or optimizing environmental controls to restore balance without human intervention."
-      },
-      {
-        content: "This proactive and autonomous approach significantly reduces downtime, prevents hardware damage, and ensures consistent performance. It transforms traditional reactive maintenance into a fully intelligent, self-optimizing system."
-      }
-    ],
+   details: [
+  {
+    content: "An AI-driven solution that predicts potential faults before they occur using real-time monitoring and machine learning."
+  },
+  {
+    content: "The platform helps reduce downtime by recommending or automatically initiating corrective actions for optimal performance."
+  }
+],
+
+features: [
+  { name: "AI Prediction Engine", icon: FaBrain },
+  { name: "Automated Response", icon: FaRobot },
+  { name: "System Optimization", icon: FaCogs },
+  { name: "Real-Time Monitoring", icon: FaSearch }
+],
 
     metrics: [
       { value: "70%+", label: "Failure Prevention Rate" },
@@ -479,12 +526,7 @@ const PRODUCTS = [
       { title: "Act", desc: "Automatically adjusts environment and operations." }
     ],
 
-    features: [
-      { name: "AI Prediction Engine", icon: "🧠" },
-      { name: "Automated Temperature Control", icon: "🌡️" },
-      { name: "Real-Time Monitoring", icon: "📡" },
-      { name: "Self-Healing Systems", icon: "♻️" }
-    ],
+   
 
     useCases: ["Data Centers", "Industrial Equipment", "Energy Systems"],
     tech: ["Machine Learning", "IoT Sensors", "Python", "Cloud AI"]
@@ -502,19 +544,20 @@ const PRODUCTS = [
   desc: "A data-driven energy management solution that collects energy consumption data, processes key metrics, and visualizes performance through interactive Google Looker Studio dashboards.",
 
   details: [
-    {
-      content: "The Google Analytics Application was developed to provide organizations with clear visibility into their energy consumption patterns through centralized monitoring and reporting. By integrating operational energy data into Google Looker Studio, the platform transforms raw records into meaningful dashboards that support informed decision-making and sustainability initiatives."
-    },
-    {
-      content: "The solution collects energy-related data from multiple sources and processes it into structured datasets. These datasets are then pushed to Google Looker Studio, where interactive dashboards provide real-time and historical insights into energy usage, consumption trends, efficiency metrics, and operational performance."
-    },
-    {
-      content: "With customizable visualizations and KPI tracking, stakeholders can easily monitor energy consumption across different facilities, departments, or equipment. The dashboards help identify usage patterns, detect inefficiencies, and support efforts to reduce energy waste and operational costs."
-    },
-    {
-      content: "By leveraging Google Looker Studio's powerful reporting capabilities, the application enables automated reporting, executive-level summaries, and data-driven analysis. This allows organizations to improve energy efficiency, track sustainability goals, and make proactive operational decisions based on accurate and accessible data."
-    }
-  ],
+  {
+    content: "A business intelligence solution that visualizes energy consumption data through interactive Google Looker Studio dashboards."
+  },
+  {
+    content: "The platform enables KPI tracking, trend analysis, and reporting to support data-driven operational decisions."
+  }
+],
+
+features: [
+  { name: "Interactive Dashboards", icon: FaChartBar },
+  { name: "Data Integration", icon: FaDatabase },
+  { name: "KPI Monitoring", icon: FaChartLine },
+  { name: "Business Intelligence", icon: FaProjectDiagram }
+],
 
   metrics: [
     { value: "100%", label: "Centralized Energy Data" },
@@ -561,14 +604,7 @@ const PRODUCTS = [
     }
   ],
 
-  features: [
-    { name: "Interactive Dashboards", icon: "📊" },
-    { name: "Energy KPI Tracking", icon: "⚡" },
-    { name: "Trend Analysis", icon: "📈" },
-    { name: "Custom Reports", icon: "📋" },
-    { name: "Data Integration", icon: "🔗" },
-    { name: "Executive Insights", icon: "📑" }
-  ],
+  
 
   useCases: [
     "Energy Consumption Monitoring",
@@ -922,7 +958,7 @@ function ProductDetailsPage({ product }) {
       )}
 
       {/* HOW IT WORKS (TIMELINE FLOW) */}
-      <section className="reveal-premium" style={{ padding: "50px 24px" }}>
+      {/* <section className="reveal-premium" style={{ padding: "50px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <h2 className="section-title" style={{ marginBottom: 40 }}>
             How It Works
@@ -930,7 +966,7 @@ function ProductDetailsPage({ product }) {
 
           <div style={{ position: "relative", paddingLeft: 30 }}>
 
-            {/* vertical line */}
+
             <div style={{
               position: "absolute",
               left: "49px",
@@ -946,7 +982,7 @@ function ProductDetailsPage({ product }) {
                 alignItems: "flex-start",
                 marginBottom: 30
               }}>
-                {/* step circle */}
+
                 <div style={{
                   width: 36,
                   height: 36,
@@ -963,7 +999,7 @@ function ProductDetailsPage({ product }) {
                   {i + 1}
                 </div>
 
-                {/* content */}
+
                 <div
                   style={{ ...CARD, flex: 1 }}
                   onMouseEnter={e => {
@@ -984,10 +1020,10 @@ function ProductDetailsPage({ product }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* HIGHLIGHTS */}
-      {product.highlights && (
+      {/* {product.highlights && (
         <section className="reveal-premium" style={{
           padding: "50px 24px",
           background: "#f7f8fc"
@@ -1022,42 +1058,65 @@ function ProductDetailsPage({ product }) {
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* FEATURES */}
-      <section className="reveal-premium" style={{
-        padding: "50px 24px",
-        background: "#f3f4f8"
-      }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 className="section-title" style={{ marginBottom: 40 }}>
-            Key Features
-          </h2>
+      <section
+  className="reveal-premium"
+  style={{
+    padding: "50px 24px",
+    background: "#f3f4f8"
+  }}
+>
+  <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+    <h2 className="section-title" style={{ marginBottom: 40 }}>
+      Key Features
+    </h2>
 
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
-            gap: 20
-          }}>
-            {product.features.map((f, i) => (
-              <div
-                key={i}
-                style={{ ...CARD, textAlign: "center" }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = "translateY(-6px)";
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                <div style={{ fontSize: 26, marginBottom: 10 }}>{f.icon}</div>
-                <h4>{f.name}</h4>
-              </div>
-            ))}
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+        gap: 20
+      }}
+    >
+      {product.features.map((f, i) => {
+        const Icon = f.icon;
+
+        return (
+          <div
+            key={i}
+            style={{
+              ...CARD,
+              textAlign: "center"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-6px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            <div
+              style={{
+                marginBottom: 12,
+                display: "flex",
+                justifyContent: "center",
+                color: "#3B3FB5"
+              }}
+            >
+              <Icon size={28} />
+            </div>
+
+            <h4 style={{ margin: 0 }}>
+              {f.name}
+            </h4>
           </div>
-        </div>
-      </section>
-
+        );
+      })}
+    </div>
+  </div>
+</section>
       {/* USE CASES */}
       {/* <section className="reveal-premium" style={{ padding: "50px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
