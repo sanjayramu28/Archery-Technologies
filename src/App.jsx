@@ -33,7 +33,10 @@ import {
   FaRobot,
   FaCogs,
   FaEye,
-  FaSearch
+  FaSearch,
+  FaBuilding,
+  FaTachometerAlt,
+  FaExchangeAlt
 } from "react-icons/fa";
 import './App.css'
 import { Routes, Route, useNavigate, useParams, useLocation } from "react-router-dom";
@@ -181,7 +184,25 @@ const NAV_LINKS = [
       { label: "Contact Us", page: "/contact" }
     ]
   },
+  {
+    label: "Services", page: "/services"
 
+  },
+
+
+  {
+    label: "Products",
+    dropdown: [
+      { label: "All Products", page: "/products" },
+      { label: "Asset Management ", page: "/products/asset-management-application" },
+      { label: "Smart Meeting Room", page: "/products/smart-meeting-room" },
+      { label: "Energy Management", page: "/products/energy-management-application" },
+      { label: "Occupancy Intelligence", page: "/products/people-counting-application" },
+      // { label: "FDD", page: "/products/fault-detection-diagnosis" },
+      { label: "FDD Using AI", page: "/products/ai-based-fault-detection-diagnosis" },
+      // { label: "Google Analytics", page: "/products/google-analytics" },
+    ]
+  },
   {
     label: "Insights",
     dropdown: [
@@ -191,26 +212,6 @@ const NAV_LINKS = [
     ]
   },
 
-  {
-    label: "Products",
-    dropdown: [
-      { label: "All Products", page: "/products" },
-      { label: "Asset Management App", page: "/products/asset-management-application" },
-      { label: "Smart Meeting Room", page: "/products/smart-meeting-room" },
-      { label: "Energy Management", page: "/products/energy-management-application" },
-      { label: "People Counting Application", page: "/products/people-counting-application" },
-      // { label: "FDD", page: "/products/fault-detection-diagnosis" },
-      { label: "FDD Using AI", page: "/products/ai-based-fault-detection-diagnosis" },
-      { label: "Google Analytics", page: "/products/google-analytics" },
-    ]
-  },
-
-  {
-    label: "Our Solution",
-    dropdown: [
-      { label: "Services", page: "/services" }
-    ]
-  }
 ];
 
 
@@ -222,26 +223,39 @@ const PRODUCTS = [
   {
     slug: "asset-management-application",
     icon: Archive,
-    title: "Asset Management Application",
+    title: "Asset Management ",
     category: "Core Platform",
     short: "Enterprise-grade platform for managing asset lifecycle.",
     desc: "Comprehensive enterprise solution for complete visibility and control over organizational assets.",
 
-   details: [
-  {
-    content: "A centralized platform for managing and tracking organizational assets throughout their lifecycle. It provides complete visibility into asset location, status, maintenance, and utilization."
-  },
-  {
-    content: "The system improves operational efficiency through real-time monitoring, automated workflows, and insightful reporting for better asset management."
-  }
-],
+    details: [
+      {
+        content: "Asset Management solution provides a centralized platform to track, manage, and optimize physical, IT, and operational assets throughout their entire lifecycle. By connecting asset information, maintenance activities and operational insights, organizations can improve asset utilization, reduce operational costs, minimize downtime, and make informed business decisions."
+      }
+    ],
 
-features: [
-  { name: "Asset Tracking", icon: FaBoxes },
-  { name: "Analytics", icon: FaChartLine },
-  { name: "Maintenance Management", icon: FaTools },
-  { name: "Location Tracking", icon: FaMapMarkedAlt }
-],
+    features: [
+      {
+        name: "Asset Tracking",
+        icon: FaBoxes,
+        desc: "Maintain complete visibility of asset information, ownership, status, and lifecycle from acquisition to retirement through a centralized asset repository."
+      },
+      {
+        name: "Analytics",
+        icon: FaChartLine,
+        desc: "Gain actionable insights with dashboards and reports to monitor asset performance, utilization, maintenance trends, and operational efficiency."
+      },
+      {
+        name: "Maintenance Management",
+        icon: FaTools,
+        desc: "Plan and manage preventive and corrective maintenance to reduce downtime, extend asset lifespan, and improve service reliability."
+      },
+      {
+        name: "Location Tracking",
+        icon: FaMapMarkedAlt,
+        desc: "Maintain accurate records of asset locations across facilities and departments to simplify asset allocation, transfers, and inventory audits."
+      }
+    ],
 
     metrics: [
       { value: "48%", label: "Downtime Reduction" },
@@ -286,20 +300,44 @@ features: [
     desc: "Intelligent platform to optimize workspace collaboration.",
 
     details: [
-  {
-    content: "An intelligent meeting room solution that simplifies room booking, scheduling, and workspace management through automation."
-  },
-  {
-    content: "It improves room utilization, eliminates scheduling conflicts, and provides real-time visibility into workspace usage."
-  }
-],
+      {
+        content: "Simplify meeting room management with seamless Outlook Calendar integration and secure facial recognition access. Automatically verify meeting organizers and grant authorized room entry, creating a smarter, more secure, and efficient workplace.It improves room utilization, eliminates scheduling conflicts, and provides real-time visibility into workspace usage."
+      },
+      // {
+      //   content: "An intelligent meeting room solution that simplifies room booking, scheduling, and workspace management through automation."
+      // },
+      {
+        content: ""
+      }
+    ],
 
-features: [
-  { name: "Room Booking", icon: FaCalendarAlt },
-  { name: "Access Control", icon: FaDoorOpen },
-  { name: "Occupancy Tracking", icon: FaUsers },
-  { name: "Usage Analytics", icon: FaChartBar }
-],
+    features: [
+      {
+        name: "Outlook Calendar Integration",
+        icon: FaCalendarAlt,
+        desc: "Synchronize meeting schedules directly with Microsoft Outlook Calendar for seamless room booking and automated schedule updates."
+      },
+      {
+        name: "Facial Recognition Access",
+        icon: FaExclamationTriangle,
+        desc: "Authenticate meeting organizers using facial recognition to provide secure, contactless, and authorized room access."
+      },
+      {
+        name: "Access Control",
+        icon: FaDoorOpen,
+        desc: "Enable secure room access and automated check-ins for scheduled meetings."
+      },
+      {
+        name: "Meeting Room Display",
+        icon: FaUsers,
+        desc: "Display real-time meeting schedules, room availability, organizer details, and upcoming bookings on dedicated room panels."
+      },
+      {
+        name: "Automated Room Access",
+        icon: FaChartBar,
+        desc: "Automatically unlock meeting rooms after successful identity verification, eliminating manual access and improving security."
+      }
+    ],
 
     metrics: [
       { value: "52%", label: "Room Utilization Increase" },
@@ -337,26 +375,39 @@ features: [
   {
     slug: "energy-management-application",
     icon: BatteryCharging,
-    title: "Energy Management Application",
+    title: "Energy Management ",
     category: "Core Platform",
     short: "Energy monitoring and optimization.",
     desc: "Platform to monitor and optimize energy consumption.",
 
     details: [
-  {
-    content: "A platform that monitors energy consumption and provides visibility into usage patterns across facilities and operations."
-  },
-  {
-    content: "Interactive dashboards help organizations optimize energy usage, reduce costs, and achieve sustainability goals."
-  }
-],
+      {
+        content: "Our Energy Management platform provides a centralized solution for collecting, visualizing, and analyzing energy data from diverse enterprise systems and connected infrastructure. With interactive dashboards, advanced analytics, and AI-powered intelligence, organizations can uncover consumption patterns, identify operational anomalies, and make informed decisions that optimize energy performance."
+      }
+    ],
 
-features: [
-  { name: "Energy Monitoring", icon: FaBolt },
-  { name: "Consumption Analytics", icon: FaChartLine },
-  { name: "Sustainability Tracking", icon: FaLeaf },
-  { name: "Reporting Dashboard", icon: FaChartBar }
-],
+    features: [
+      {
+        name: "Interactive Dashboards",
+        icon: FaBolt,
+        desc: "Visualize energy consumption through dynamic dashboards, charts, and reports for real-time monitoring and analysis."
+      },
+      {
+        name: "Energy Analytics",
+        icon: FaChartLine,
+        desc: "Analyze consumption trends, compare historical performance, and identify opportunities to improve operational efficiency."
+      },
+      {
+        name: "AI Anomaly Detection",
+        icon: FaLeaf,
+        desc: "Leverage AI to detect abnormal energy usage, identify suspicious consumption patterns, and generate proactive alerts."
+      },
+      {
+        name: "Custom Reports",
+        icon: FaChartBar,
+        desc: "Generate detailed energy reports with configurable filters and visualizations to support business and sustainability decisions."
+      }
+    ],
 
     metrics: [
       { value: "42%", label: "Energy Savings" },
@@ -374,38 +425,50 @@ features: [
       { title: "Optimize", desc: "Reduce waste." }
     ],
 
-   
+
     useCases: ["Buildings", "Factories"],
     tech: ["Python", "IoT", "AWS"]
   },
 
   /* ───────────────────────────── */
-  /* 4. PEOPLE COUNTING */
+  /* 4. Occupancy Intelligence */
   /* ───────────────────────────── */
   {
     slug: "people-counting-application",
     icon: Users,
-    title: "People Counting Application",
+    title: "Occupancy Intelligence ",
     category: "AI Vision",
     short: "AI-powered people analytics.",
     desc: "Track and analyze human movement patterns.",
 
     details: [
-  {
-    content: "An AI-powered solution that tracks people movement and occupancy levels in real time across physical spaces."
-  },
-  {
-    content: "The platform provides insights into traffic patterns, peak hours, and space utilization to support operational planning."
-  }
-],
+      {
+        content: "Occupancy Intelligence platform collects and analyzes sensor-generated occupancy data from buildings, floors, facilities, and individual spaces to deliver a comprehensive view of people movement and space utilization. Through interactive dashboards, advanced analytics, and historical trend analysis, organizations gain actionable insights into occupancy patterns, utilization rates, and operational performance."
+      }
+    ],
 
-features: [
-  { name: "Live Counting", icon: FaUsers },
-  { name: "Occupancy Insights", icon: FaEye },
-  { name: "Traffic Analytics", icon: FaChartLine },
-  { name: "Heatmap Analysis", icon: FaProjectDiagram }
-],
-
+    features: [
+      {
+        name: "Space Utilization Analytics",
+        icon: FaBuilding,
+        desc: "Analyze occupancy trends and utilization patterns to optimize workspace planning and operational efficiency."
+      },
+      {
+        name: "Energy Analytics",
+        icon: FaChartLine,
+        desc: "Analyze consumption trends, compare historical performance, and identify opportunities to improve operational efficiency."
+      },
+      {
+        name: "Interactive Dashboards",
+        icon: FaTachometerAlt,
+        desc: "Visualize occupancy metrics through dynamic dashboards, charts, and reports for real-time operational visibility."
+      },
+      {
+        name: "In & Out Count Analysis",
+        icon: FaExchangeAlt,
+        desc: "Track entry and exit counts to understand occupancy flow, peak usage periods, and space utilization trends."
+      }
+    ],
     metrics: [
       { value: "95%", label: "Accuracy" },
       { value: "40%", label: "Efficiency Improvement" }
@@ -421,7 +484,7 @@ features: [
       { title: "Analyze", desc: "Insights generation." }
     ],
 
-    
+
 
     useCases: ["Retail", "Airports"],
     tech: ["AI", "OpenCV"]
@@ -439,20 +502,33 @@ features: [
     desc: "System that detects abnormal conditions like temperature variations and alerts operators for manual intervention.",
 
     details: [
-  {
-    content: "A monitoring solution that continuously tracks system conditions such as temperature and operational performance."
-  },
-  {
-    content: "The system detects abnormal events and sends instant alerts, helping operators respond quickly and prevent disruptions."
-  }
-],
+      {
+        content: "AI-Powered Fault Detection & Diagnostics (FDD) is an intelligent operations platform that continuously monitors connected IoT systems to identify equipment anomalies, operational faults, and performance deviations. By combining advanced AI models with rule-based diagnostics, the platform delivers actionable insights, predictive recommendations, and automated responses through secure API integrations. This enables organizations to optimize facility performance, improve equipment reliability, minimize operational disruptions, and drive proactive maintenance across critical infrastructure from a centralized, intelligent platform."
+      }
+    ],
 
-features: [
-  { name: "Condition Monitoring", icon: FaThermometerHalf },
-  { name: "Alert Management", icon: FaBell },
-  { name: "Live Dashboard", icon: FaChartBar },
-  { name: "Issue Tracking", icon: FaExclamationTriangle }
-],
+    features: [
+      {
+        name: "Intelligent Fault Detection",
+        icon: FaSearch,
+        desc: "Continuously identify equipment faults and operational abnormalities using AI-driven diagnostics and configurable detection rules."
+      },
+      {
+        name: "Automated Workflow Execution",
+        icon: FaRobot,
+        desc: "Execute predefined control actions and operational workflows through secure API integrations to accelerate issue resolution."
+      },
+      {
+        name: "Predictive Recommendations",
+        icon: FaBrain,
+        desc: "Deliver AI-powered recommendations that help operators optimize equipment performance and prevent potential operational disruptions."
+      },
+      {
+        name: "Operational Intelligence Dashboard",
+        icon: FaChartLine,
+        desc: "Monitor system health, fault events, equipment status, and performance trends through centralized dashboards and interactive analytics."
+      }
+    ],
 
     metrics: [
       { value: "60%+", label: "Reduction in Critical Failures" },
@@ -474,7 +550,9 @@ features: [
       { title: "Respond", desc: "Manual corrective action taken." }
     ],
 
-    
+    // imaes: [
+    //   source = "../images/asset-dashboard.jpg"
+    // ],
     useCases: ["Data Centers", "Manufacturing", "Server Rooms"],
     tech: ["Node.js", "Monitoring Tools", "IoT Sensors"]
   },
@@ -490,21 +568,34 @@ features: [
     short: "Predictive fault detection with automated system optimization.",
     desc: "AI-driven system that predicts failures and dynamically adjusts operating conditions such as temperature for optimal performance.",
 
-   details: [
-  {
-    content: "An AI-driven solution that predicts potential faults before they occur using real-time monitoring and machine learning."
-  },
-  {
-    content: "The platform helps reduce downtime by recommending or automatically initiating corrective actions for optimal performance."
-  }
-],
+    details: [
+      {
+        content: "AI-Powered Fault Detection & Diagnostics (FDD) is an intelligent operations platform that continuously monitors connected IoT systems to identify equipment anomalies, operational faults, and performance deviations. By combining advanced AI models with rule-based diagnostics, the platform delivers actionable insights, predictive recommendations, and automated responses through secure API integrations. This enables organizations to optimize facility performance, improve equipment reliability, minimize operational disruptions, and drive proactive maintenance across critical infrastructure from a centralized, intelligent platform."
+      }
+    ],
 
-features: [
-  { name: "AI Prediction Engine", icon: FaBrain },
-  { name: "Automated Response", icon: FaRobot },
-  { name: "System Optimization", icon: FaCogs },
-  { name: "Real-Time Monitoring", icon: FaSearch }
-],
+    features: [
+      {
+        name: "Intelligent Fault Detection",
+        icon: FaSearch,
+        desc: "Continuously identify equipment faults and operational abnormalities using AI-driven diagnostics and configurable detection rules."
+      },
+      {
+        name: "Automated Workflow Execution",
+        icon: FaRobot,
+        desc: "Execute predefined control actions and operational workflows through secure API integrations to accelerate issue resolution."
+      },
+      {
+        name: "Predictive Recommendations",
+        icon: FaBrain,
+        desc: "Deliver AI-powered recommendations that help operators optimize equipment performance and prevent potential operational disruptions."
+      },
+      {
+        name: "Operational Intelligence Dashboard",
+        icon: FaChartLine,
+        desc: "Monitor system health, fault events, equipment status, and performance trends through centralized dashboards and interactive analytics."
+      }
+    ],
 
     metrics: [
       { value: "70%+", label: "Failure Prevention Rate" },
@@ -526,7 +617,7 @@ features: [
       { title: "Act", desc: "Automatically adjusts environment and operations." }
     ],
 
-   
+
 
     useCases: ["Data Centers", "Industrial Equipment", "Energy Systems"],
     tech: ["Machine Learning", "IoT Sensors", "Python", "Cloud AI"]
@@ -535,93 +626,93 @@ features: [
   /* ───────────────────────────── */
   /* 7. GOOGLE ANALYTICS */
   /* ───────────────────────────── */
- {
-  slug: "google-analytics",
-  icon: BarChart3,
-  title: "Google Analytics & Digital Intelligence ",
-  category: "Business Intelligence",
-  short: "Centralized energy monitoring and reporting platform powered by Google Looker Studio.",
-  desc: "A data-driven energy management solution that collects energy consumption data, processes key metrics, and visualizes performance through interactive Google Looker Studio dashboards.",
+  {
+    slug: "google-analytics",
+    icon: BarChart3,
+    title: "Google Analytics & Digital Intelligence ",
+    category: "Business Intelligence",
+    short: "Centralized energy monitoring and reporting platform powered by Google Looker Studio.",
+    desc: "A data-driven energy management solution that collects energy consumption data, processes key metrics, and visualizes performance through interactive Google Looker Studio dashboards.",
 
-  details: [
-  {
-    content: "A business intelligence solution that visualizes energy consumption data through interactive Google Looker Studio dashboards."
-  },
-  {
-    content: "The platform enables KPI tracking, trend analysis, and reporting to support data-driven operational decisions."
+    details: [
+      {
+        content: "A business intelligence solution that visualizes energy consumption data through interactive Google Looker Studio dashboards."
+      },
+      {
+        content: "The platform enables KPI tracking, trend analysis, and reporting to support data-driven operational decisions."
+      }
+    ],
+
+    features: [
+      { name: "Interactive Dashboards", icon: FaChartBar },
+      { name: "Data Integration", icon: FaDatabase },
+      { name: "KPI Monitoring", icon: FaChartLine },
+      { name: "Business Intelligence", icon: FaProjectDiagram }
+    ],
+
+    metrics: [
+      { value: "100%", label: "Centralized Energy Data" },
+      { value: "24/7", label: "Dashboard Availability" },
+      { value: "Real-Time", label: "Performance Monitoring" },
+      { value: "Interactive", label: "Reporting & Insights" }
+    ],
+
+    highlights: [
+      {
+        title: "Energy Consumption Monitoring",
+        desc: "Track and analyze energy usage across multiple sources."
+      },
+      {
+        title: "Google Looker Studio Integration",
+        desc: "Visualize data through dynamic dashboards and reports."
+      },
+      {
+        title: "KPI & Trend Analysis",
+        desc: "Monitor key energy performance indicators and consumption trends."
+      },
+      {
+        title: "Automated Reporting",
+        desc: "Generate actionable insights through centralized reporting."
+      }
+    ],
+
+    steps: [
+      {
+        title: "Collect Data",
+        desc: "Gather energy consumption data from operational sources."
+      },
+      {
+        title: "Process & Transform",
+        desc: "Clean, structure, and prepare datasets for reporting."
+      },
+      {
+        title: "Push to Looker Studio",
+        desc: "Integrate processed data with Google Looker Studio."
+      },
+      {
+        title: "Visualize & Analyze",
+        desc: "Monitor KPIs, trends, and energy performance through dashboards."
+      }
+    ],
+
+
+
+    useCases: [
+      "Energy Consumption Monitoring",
+      "Utility Usage Analysis",
+      "Operational Performance Tracking",
+      "Sustainability Reporting",
+      "Management Dashboards"
+    ],
+
+    tech: [
+      "Google Looker Studio",
+      "Google Sheets / Data Connectors",
+      "REST APIs",
+      "Data Processing Pipelines",
+      "Business Intelligence Reporting"
+    ]
   }
-],
-
-features: [
-  { name: "Interactive Dashboards", icon: FaChartBar },
-  { name: "Data Integration", icon: FaDatabase },
-  { name: "KPI Monitoring", icon: FaChartLine },
-  { name: "Business Intelligence", icon: FaProjectDiagram }
-],
-
-  metrics: [
-    { value: "100%", label: "Centralized Energy Data" },
-    { value: "24/7", label: "Dashboard Availability" },
-    { value: "Real-Time", label: "Performance Monitoring" },
-    { value: "Interactive", label: "Reporting & Insights" }
-  ],
-
-  highlights: [
-    {
-      title: "Energy Consumption Monitoring",
-      desc: "Track and analyze energy usage across multiple sources."
-    },
-    {
-      title: "Google Looker Studio Integration",
-      desc: "Visualize data through dynamic dashboards and reports."
-    },
-    {
-      title: "KPI & Trend Analysis",
-      desc: "Monitor key energy performance indicators and consumption trends."
-    },
-    {
-      title: "Automated Reporting",
-      desc: "Generate actionable insights through centralized reporting."
-    }
-  ],
-
-  steps: [
-    {
-      title: "Collect Data",
-      desc: "Gather energy consumption data from operational sources."
-    },
-    {
-      title: "Process & Transform",
-      desc: "Clean, structure, and prepare datasets for reporting."
-    },
-    {
-      title: "Push to Looker Studio",
-      desc: "Integrate processed data with Google Looker Studio."
-    },
-    {
-      title: "Visualize & Analyze",
-      desc: "Monitor KPIs, trends, and energy performance through dashboards."
-    }
-  ],
-
-  
-
-  useCases: [
-    "Energy Consumption Monitoring",
-    "Utility Usage Analysis",
-    "Operational Performance Tracking",
-    "Sustainability Reporting",
-    "Management Dashboards"
-  ],
-
-  tech: [
-    "Google Looker Studio",
-    "Google Sheets / Data Connectors",
-    "REST APIs",
-    "Data Processing Pipelines",
-    "Business Intelligence Reporting"
-  ]
-}
 ];
 
 function ProductsPage() {
@@ -649,8 +740,8 @@ function ProductsPage() {
         <p style={{ fontSize: 18, maxWidth: 700 }}>Innovative platforms designed to solve real-world business challenges through modern technology and advanced automation.</p>
       </div>
 
-      <section style={{ padding: "80px 24px", maxWidth: 1220, margin: "0 auto" }}>
-        <h2 className="section-title" style={{ marginBottom: 60 }}>Product Portfolio</h2>
+      <section style={{ padding: "8px 24px", maxWidth: 1220, margin: "0 auto" }}>
+        {/* <h2 className="section-title" style={{ marginBottom: 60 }}>Product Portfolio</h2> */}
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))", gap: 24 }}>
           {PRODUCTS.map((p, idx) => (
@@ -906,217 +997,153 @@ function ProductDetailsPage({ product }) {
       </section>
 
       {/* OVERVIEW (PARAGRAPH STYLE) */}
-      <section className="reveal-premium" style={{
-        maxWidth: 1100,
-        margin: "0 auto",
-        padding: "50px 24px"
-      }}>
-        <h2 className="section-title left" style={{ marginBottom: 30 }}>
-          Overview
-        </h2>
-
-        {product.details.map((d, i) => (
-          <p key={i} style={{
-            marginBottom: 20,
-            lineHeight: 1.9,
-            color: "#444",
-            fontSize: 16
+      <div className="row ">
+        <div className="col-md-6">
+          <section className="reveal-premium" style={{
+            maxWidth: 1100,
+            margin: "0 auto",
+            padding: "30px 24px"
           }}>
-            {d.content}
-          </p>
-        ))}
-      </section>
-
-      {/* METRICS */}
-      {product.metrics && (
-        <section className="reveal-premium" style={{
-          padding: "70px 24px",
-          background: "linear-gradient(135deg,#1e1f6b,#3B3FB5)",
-          color: "#fff"
-        }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
-            <h2 style={{ marginBottom: 40 }}>Business Impact</h2>
-
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
-              gap: 20
-            }}>
-              {product.metrics.map((m, i) => (
-                <div key={i} style={{
-                  padding: 24,
-                  borderRadius: 14,
-                  background: "rgba(255,255,255,0.08)"
-                }}>
-                  <h2 style={{ fontSize: 32, fontWeight: 800 }}>{m.value}</h2>
-                  <p>{m.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* HOW IT WORKS (TIMELINE FLOW) */}
-      {/* <section className="reveal-premium" style={{ padding: "50px 24px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 className="section-title" style={{ marginBottom: 40 }}>
-            How It Works
-          </h2>
-
-          <div style={{ position: "relative", paddingLeft: 30 }}>
-
-
-            <div style={{
-              position: "absolute",
-              left: "49px",
-              top: 0,
-              bottom: 0,
-              width: 2,
-              background: "#e0e4ff"
-            }} />
-
-            {product.steps.map((step, i) => (
-              <div key={i} style={{
-                display: "flex",
-                alignItems: "flex-start",
-                marginBottom: 30
-              }}>
-
-                <div style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: "50%",
-                  background: "#3B3FB5",
-                  color: "#fff",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 700,
-                  marginRight: 20,
-                  zIndex: 2
-                }}>
-                  {i + 1}
-                </div>
-
-
-                <div
-                  style={{ ...CARD, flex: 1 }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.transform = "translateY(-6px)";
-                    e.currentTarget.style.boxShadow = "0 18px 40px rgba(59,63,181,0.25)";
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(59,63,181,0.12)";
-                  }}
-                >
-                  <h4>{step.title}</h4>
-                  <p style={{ color: "#666", fontSize: 14 }}>
-                    {step.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* HIGHLIGHTS */}
-      {/* {product.highlights && (
-        <section className="reveal-premium" style={{
-          padding: "50px 24px",
-          background: "#f7f8fc"
-        }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <h2 className="section-title" style={{ marginBottom: 40 }}>
-              Why This Solution Stands Out
+            <h2 className="section-title left" style={{ marginBottom: 30 }}>
+              Overview
             </h2>
 
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
-              gap: 20
+            {product.details.map((d, i) => (
+              <p key={i} style={{
+                marginBottom: 20,
+                lineHeight: 1.9,
+                color: "#444",
+                fontSize: 20
+              }}>
+                {d.content}
+              </p>
+            ))}
+          </section>
+        </div>
+        <div className="col-md-6">
+          {/* METRICS */}
+          {product.metrics && (
+            <section className="reveal-premium" style={{
+              padding: "0px 24px",
+              // background: "linear-gradient(135deg,#1e1f6b,#3B3FB5)",
+              color: "#fdf9f9"
             }}>
-              {product.highlights.map((item, i) => (
-                <div
-                  key={i}
-                  style={CARD}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.transform = "translateY(-6px)";
-                    e.currentTarget.style.boxShadow = "0 18px 40px rgba(59,63,181,0.25)";
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(59,63,181,0.12)";
-                  }}
-                >
-                  <h4>{item.title}</h4>
-                  <p style={{ color: "#666" }}>{item.desc}</p>
+              <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
+                <h2 style={{ marginBottom: 40, marginTop: "29px", color: "black" }} className="section-title left">Business Impact</h2>
+
+                <div style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+                  gap: 20
+                }}>
+                  {product.metrics.map((m, i) => (
+                    <div key={i} style={{
+                      padding: 19,
+                      borderRadius: 14,
+                      // border: "3px solid #2e21e2",
+                      background: "rgb(59, 63, 181)"
+                    }}>
+                      <h2 style={{ fontSize: 32, fontWeight: 800 }}>{m.value}</h2>
+                      <p>{m.label}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )} */}
+              </div>
+            </section>
+          )}
+        </div>
+      </div>
 
-      {/* FEATURES */}
-      <section
-  className="reveal-premium"
-  style={{
-    padding: "50px 24px",
-    background: "#f3f4f8"
-  }}
->
-  <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-    <h2 className="section-title" style={{ marginBottom: 40 }}>
-      Key Features
-    </h2>
-
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
-        gap: 20
-      }}
-    >
-      {product.features.map((f, i) => {
-        const Icon = f.icon;
-
-        return (
-          <div
-            key={i}
+      <div className="row">
+        <div className="col-md-6">
+          {/* FEATURES */}
+          <section
+            className="reveal-premium"
             style={{
-              ...CARD,
-              textAlign: "center"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-6px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
+              padding: "10px 24px",
+              background: "#fff"
             }}
           >
-            <div
-              style={{
-                marginBottom: 12,
-                display: "flex",
-                justifyContent: "center",
-                color: "#3B3FB5"
-              }}
-            >
-              <Icon size={28} />
-            </div>
+            <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+              <h2
+                className="section-title left"
+                style={{ marginBottom: 40 }}
+              >
+                Solution Features
+              </h2>
 
-            <h4 style={{ margin: 0 }}>
-              {f.name}
-            </h4>
-          </div>
-        );
-      })}
-    </div>
-  </div>
-</section>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 24
+                }}
+              >
+                {product.features.map((f, i) => {
+                  const Icon = f.icon;
+
+                  return (
+                    <div
+                      key={i}
+                      style={{
+                        display: "flex",
+                        gap: 20,
+                        alignItems: "flex-start",
+                        paddingBottom: 20,
+                        borderBottom:
+                          i !== product.features.length - 1
+                            ? "1px solid #e8eaf3"
+                            : "none"
+                      }}
+                    >
+                      <div
+                        style={{
+                          minWidth: 55,
+                          height: 55,
+                          borderRadius: "50%",
+                          background: "rgba(59,63,181,0.08)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: "#3B3FB5"
+                        }}
+                      >
+                        <Icon size={24} />
+                      </div>
+
+                      <div>
+                        <h3
+                          style={{
+                            margin: "0 0 8px",
+                            fontSize: 22,
+                            fontWeight: 700
+                          }}
+                        >
+                          {f.name}
+                        </h3>
+
+                        <p
+                          style={{
+                            margin: 0,
+                            color: "#555",
+                            lineHeight: 1.7,
+                            fontSize: 16
+                          }}
+                        >
+                          {f.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        </div>
+        {/* <div className="col-md-6">
+          <img src="../src/images/asset-dashboard.jpg" style={{width:"400px",height:"400px"}}/>
+        </div> */}
+      </div>
       {/* USE CASES */}
       {/* <section className="reveal-premium" style={{ padding: "50px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -1139,7 +1166,7 @@ function ProductDetailsPage({ product }) {
       </section> */}
 
       {/* TECH STACK */}
-      <section className="reveal-premium" style={{ padding: "50px 24px" }}>
+      {/* <section className="reveal-premium" style={{ padding: "50px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
           <h2 className="section-title" style={{ marginBottom: 40 }}>
             Technology Stack
@@ -1165,7 +1192,7 @@ function ProductDetailsPage({ product }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
     </div>
   );
@@ -1427,8 +1454,8 @@ function Navbar({ currentPage }) {
             left: 0,
             right: 0,
             bottom: 0,
-height:"250px",
-overflowY:"auto",
+            height: "250px",
+            overflowY: "auto",
             /* 🔥 TRUE GLASS */
             background:
               "linear-gradient(145deg, rgba(255,255,255,0.75), rgba(255,255,255,0.45))",
@@ -1663,77 +1690,77 @@ function ChatWidget() {
 // ══════════════════════════════════════════════════════════════════════════
 function HomePage() {
   const CLIENTS = [
-  {
-    name: "Four Corners Technologies",
-    project: "AI-Based Fault Detection System",
-    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
-  },
-  {
-    name: "Arrow Access ",
-    project: "Arrow Access Portfolio",
-    logo: "https://www.fourcorners/assets/logo-44Hu2BF3.png"
-  },
-  {
-    name: "Kairavi Montessori ",
-    project: "Montessori Application",
-    logo: "https://static.wixstatic.com/media/9981f8_6b4eda152c3c46849c03a456834418c9~mv2.png/v1/fill/w_342,h_186,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9981f8_6b4eda152c3c46849c03a456834418c9~mv2.png"
-  },
-  {
-    name: "Four Corners Technologies",
-    project: "Asset Management Platform",
-    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
-  },
-  {
-    name: "Four Corners Technologies",
-    project: "People Counting Analytics",
-    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
-  },
-  {
-    name: "Four Corners Technologies",
-    project: "Energy Monitoring System",
-    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
-  },
-  {
-    name: "Four Corners Technologies",
-    project: "Analytics Dashboard Integration",
-    logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
-  }
-];
+    {
+      name: "Four Corners Technologies",
+      project: "AI-Based Fault Detection System",
+      logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
+    },
+    {
+      name: "Arrow Access ",
+      project: "Arrow Access Portfolio",
+      logo: "https://www.fourcorners/assets/logo-44Hu2BF3.png"
+    },
+    {
+      name: "Kairavi Montessori ",
+      project: "Montessori Application",
+      logo: "https://static.wixstatic.com/media/9981f8_6b4eda152c3c46849c03a456834418c9~mv2.png/v1/fill/w_342,h_186,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9981f8_6b4eda152c3c46849c03a456834418c9~mv2.png"
+    },
+    {
+      name: "Four Corners Technologies",
+      project: "Asset Management Platform",
+      logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
+    },
+    {
+      name: "Four Corners Technologies",
+      project: "Occupancy Intelligence Analytics",
+      logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
+    },
+    {
+      name: "Four Corners Technologies",
+      project: "Energy Monitoring System",
+      logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
+    },
+    {
+      name: "Four Corners Technologies",
+      project: "Analytics Dashboard Integration",
+      logo: "https://www.fourcorners.asia/assets/logo-44Hu2BF3.png"
+    }
+  ];
   const navigate = useNavigate();
-useEffect(() => {
-  const track = document.querySelector(".clients-track-ultra");
+  useEffect(() => {
+    const track = document.querySelector(".clients-track-ultra");
 
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-  if (!track) return;
+    if (!track) return;
 
-  track.addEventListener("mousedown", (e) => {
-    isDown = true;
-    startX = e.pageX - track.offsetLeft;
-    scrollLeft = track.scrollLeft;
-    track.style.cursor = "grabbing";
-  });
+    track.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+      track.style.cursor = "grabbing";
+    });
 
-  track.addEventListener("mouseleave", () => {
-    isDown = false;
-    track.style.cursor = "grab";
-  });
+    track.addEventListener("mouseleave", () => {
+      isDown = false;
+      track.style.cursor = "grab";
+    });
 
-  track.addEventListener("mouseup", () => {
-    isDown = false;
-    track.style.cursor = "grab";
-  });
+    track.addEventListener("mouseup", () => {
+      isDown = false;
+      track.style.cursor = "grab";
+    });
 
-  track.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - track.offsetLeft;
-    const walk = (x - startX) * 2;
-    track.scrollLeft = scrollLeft - walk;
-  });
-}, []);
+    track.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 2;
+      track.scrollLeft = scrollLeft - walk;
+    });
+  }, []);
   return (
     <div className="fade-in">
 
@@ -1777,38 +1804,38 @@ useEffect(() => {
 
       <section className="home-section">
 
-  <h2 className="section-title">Our Impact</h2>
+        <h2 className="section-title">Our Impact</h2>
 
-  <div className="impact-grid">
+        <div className="impact-grid">
 
-    {[
-  {
-    title: "Understand Before We Build",
-    desc: "We take time to understand your operations, challenges, and goals before recommending solutions."
-  },
-  {
-    title: "Solutions Tailored To Your Needs",
-    desc: "Every business is different. We design systems around your processes rather than forcing you to adapt to generic software."
-  },
-  {
-    title: "Technology That Delivers Results",
-    desc: "Our focus is on creating systems that improve productivity, visibility, automation, and decision-making."
-  },
-  {
-    title: "Support Beyond Launch",
-    desc: "We remain involved after deployment, ensuring your solution continues to perform and evolve with your business."
-  }
-].map((item, i) => (
-      <div key={i} className="impact-card">
-        <h2>{item.value}</h2>
-        <h3>{item.title}</h3>
-        <p>{item.desc}</p>
-      </div>
-    ))}
+          {[
+            {
+              title: "Understand Before We Build",
+              desc: "We take time to understand your operations, challenges, and goals before recommending solutions."
+            },
+            {
+              title: "Solutions Tailored To Your Needs",
+              desc: "Every business is different. We design systems around your processes rather than forcing you to adapt to generic software."
+            },
+            {
+              title: "Technology That Delivers Results",
+              desc: "Our focus is on creating systems that improve productivity, visibility, automation, and decision-making."
+            },
+            {
+              title: "Support Beyond Launch",
+              desc: "We remain involved after deployment, ensuring your solution continues to perform and evolve with your business."
+            }
+          ].map((item, i) => (
+            <div key={i} className="impact-card">
+              <h2>{item.value}</h2>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+            </div>
+          ))}
 
-  </div>
+        </div>
 
-</section>
+      </section>
       {/* WHY */}
       <section className="why-section">
         <div className="container">
@@ -1837,7 +1864,7 @@ useEffect(() => {
           </div>
         </div>
       </section>
-  {/* PROCESS */}
+      {/* PROCESS */}
       <section className="process-section">
         <div className="container">
           <h2 className="section-title mt-5">How We Work</h2>
@@ -1859,41 +1886,41 @@ useEffect(() => {
         </div>
       </section>
 
-<section className="home-section">
+      <section className="home-section">
 
-  <h2 className="section-title">Trusted By Leading Teams</h2>
+        <h2 className="section-title">Trusted By Leading Teams</h2>
 
-  <div className="clients-outer">
+        <div className="clients-outer">
 
-    <div className="clients-fade left" />
-    <div className="clients-fade right" />
+          <div className="clients-fade left" />
+          <div className="clients-fade right" />
 
-    <div
-      className="clients-track-ultra"
-      onMouseEnter={(e) => {
-        e.currentTarget.style.animationDuration = "60s"; // slow on hover
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.animationDuration = "30s";
-      }}
-    >
-      {[...CLIENTS, ...CLIENTS].map((c, i) => (
-        <div key={i} className="client-card-ultra">
+          <div
+            className="clients-track-ultra"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.animationDuration = "60s"; // slow on hover
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.animationDuration = "30s";
+            }}
+          >
+            {[...CLIENTS, ...CLIENTS].map((c, i) => (
+              <div key={i} className="client-card-ultra">
 
-          <img src={c.logo} alt={c.name} />
+                <img src={c.logo} alt={c.name} />
 
-          <div className="client-info">
-            <h4>{c.name}</h4>
-            <p>{c.project}</p>
+                <div className="client-info">
+                  <h4>{c.name}</h4>
+                  <p>{c.project}</p>
+                </div>
+
+              </div>
+            ))}
           </div>
 
         </div>
-      ))}
-    </div>
 
-  </div>
-
-</section>
+      </section>
     </div>
   );
 }
@@ -2056,9 +2083,9 @@ function ServicesPage() {
     <div className="fade-in">
 
       {/* HERO */}
-      <section className="services-hero">
+      <section className="services-hero " >
         <div className="container">
-          <h1>
+          <h1 style={{ marginTop: "20px" }}>
             Delivering <span>Scalable Digital Solutions</span>
           </h1>
           <p>
@@ -2069,9 +2096,9 @@ function ServicesPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="services-section">
+      <section className="services-section " style={{ marginTop: "30px", marginBottom: "20px" }}>
         <div className="container">
-          <h2 className="section-title">What We Offer</h2>
+          {/* <h2 className="section-title">What We Offer</h2> */}
 
           <div className="services-grid">
             {SERVICES.map((s, i) => (
@@ -2099,7 +2126,7 @@ function ServicesPage() {
         </div>
       </section>
 
-    
+
     </div>
   );
 }
