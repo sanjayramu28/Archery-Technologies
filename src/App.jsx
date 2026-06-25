@@ -1819,28 +1819,28 @@ function HomePage() {
 
       <section className="home-section">
 
-        <h2 className="section-title">Our Impact</h2>
+        <h2 className="section-title">What We Build</h2>
 
         <div className="impact-grid">
 
           {[
-            {
-              title: "Understand Before We Build",
-              desc: "We take time to understand your operations, challenges, and goals before recommending solutions."
-            },
-            {
-              title: "Solutions Tailored To Your Needs",
-              desc: "Every business is different. We design systems around your processes rather than forcing you to adapt to generic software."
-            },
-            {
-              title: "Technology That Delivers Results",
-              desc: "Our focus is on creating systems that improve productivity, visibility, automation, and decision-making."
-            },
-            {
-              title: "Support Beyond Launch",
-              desc: "We remain involved after deployment, ensuring your solution continues to perform and evolve with your business."
-            }
-          ].map((item, i) => (
+  {
+    title: "Enterprise Applications",
+    desc: "Custom web and enterprise applications that automate business operations, improve productivity, and support digital transformation."
+  },
+  {
+    title: "AI & Machine Learning Solutions",
+    desc: "Intelligent applications powered by artificial intelligence, predictive analytics, computer vision, and automation."
+  },
+  {
+    title: "Cloud & IoT Platforms",
+    desc: "Scalable cloud-native and IoT solutions for real-time monitoring, connected devices, and centralized management."
+  },
+  {
+    title: "Business Intelligence",
+    desc: "Interactive dashboards, analytics platforms, and reporting solutions that turn business data into actionable insights."
+  }
+].map((item, i) => (
             <div key={i} className="impact-card">
               <h2>{item.value}</h2>
               <h3>{item.title}</h3>
@@ -1854,23 +1854,27 @@ function HomePage() {
       {/* WHY */}
       <section className="why-section">
         <div className="container">
-          <h2 className="section-title">Why Choose Us</h2>
+          <h2 className="section-title">Technology Expertise</h2>
 
           <div className="why-grid">
             {[
-              {
-                title: "Scalable Architecture",
-                desc: "Systems designed to grow with your business without performance bottlenecks."
-              },
-              {
-                title: "Modern Technologies",
-                desc: "We use cutting-edge tools to ensure speed, reliability, and maintainability."
-              },
-              {
-                title: "Business Impact",
-                desc: "Every solution is built with measurable outcomes and ROI in mind."
-              }
-            ].map((item, i) => (
+  {
+    title: "Frontend Development",
+    desc: "Modern, responsive web applications built with React, Angular, and contemporary UI technologies."
+  },
+  {
+    title: "Backend Development",
+    desc: "Secure APIs and scalable backend systems using Node.js, Python, Java, and cloud-native architectures."
+  },
+  {
+    title: "Artificial Intelligence",
+    desc: "Machine learning, computer vision, predictive analytics, and intelligent automation solutions."
+  },
+  {
+    title: "Cloud & DevOps",
+    desc: "Deployment, infrastructure, CI/CD pipelines, AWS cloud services, containers, and scalable cloud environments."
+  }
+].map((item, i) => (
               <div key={i} className="why-card">
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
@@ -1882,15 +1886,27 @@ function HomePage() {
       {/* PROCESS */}
       <section className="process-section">
         <div className="container">
-          <h2 className="section-title mt-5">How We Work</h2>
+          <h2 className="section-title">Solutions We Provide</h2>
 
           <div className="process-grid">
             {[
-              { step: "01", title: "Understand", desc: "Analyze business needs deeply." },
-              { step: "02", title: "Design", desc: "Architect scalable systems." },
-              { step: "03", title: "Develop", desc: "Build robust solutions." },
-              { step: "04", title: "Deploy", desc: "Launch and optimize." }
-            ].map((p, i) => (
+  {
+    title: "Digital Transformation",
+    desc: "Modernizing business processes through custom software, automation, and cloud technologies."
+  },
+  {
+    title: "Enterprise Automation",
+    desc: "Workflow automation, operational monitoring, and intelligent systems that improve efficiency."
+  },
+  {
+    title: "Smart Infrastructure",
+    desc: "IoT-enabled monitoring platforms for energy management, asset tracking, and occupancy intelligence."
+  },
+  {
+    title: "Data & Analytics",
+    desc: "Business intelligence platforms that deliver real-time dashboards, reporting, and performance insights."
+  }
+].map((p, i) => (
               <div key={i} className="process-card">
                 <div className="step">{p.step}</div>
                 <h4>{p.title}</h4>
@@ -1903,7 +1919,7 @@ function HomePage() {
 
       <section className="home-section">
 
-        <h2 className="section-title">Trusted By Leading Teams</h2>
+        <h2 className="section-title">Trusted By Leading Companies</h2>
 
         <div className="clients-outer">
 
