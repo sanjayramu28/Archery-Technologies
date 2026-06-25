@@ -941,8 +941,15 @@ function ProductsPage() {
 function ProductDetailsPage({ product }) {
   const navigate = useNavigate();
   const location = useLocation();
+  const { slug } = useParams();
+  // console.log(slug)
+    const currentProduct = product || PRODUCTS.find((prod) => prod.slug === slug);
 
-  if (!product) return <div>Product not found</div>;
+  
+  if (!currentProduct) {
+    return <div>Product not found</div>;
+  }
+
 
   // 🔥 Animation (always works)
   useEffect(() => {
@@ -982,7 +989,7 @@ function ProductDetailsPage({ product }) {
         textAlign: "center"
       }}>
         <h1 style={{ fontSize: "clamp(36px,6vw,56px)", fontWeight: 800 }}>
-          {product.title}
+          {currentProduct.title}
         </h1>
 
         <p style={{
@@ -992,7 +999,7 @@ function ProductDetailsPage({ product }) {
           lineHeight: 1.8,
           fontSize: 16
         }}>
-          {product.desc}
+          {currentProduct.desc}
         </p>
       </section>
 
@@ -1008,7 +1015,7 @@ function ProductDetailsPage({ product }) {
               Overview
             </h2>
 
-            {product.details.map((d, i) => (
+            {currentProduct.details.map((d, i) => (
               <p key={i} style={{
                 marginBottom: 20,
                 lineHeight: 1.9,
@@ -1022,7 +1029,7 @@ function ProductDetailsPage({ product }) {
         </div>
         <div className="col-md-6">
           {/* METRICS */}
-          {product.metrics && (
+          {currentProduct.metrics && (
             <section className="reveal-premium" style={{
               padding: "0px 24px",
               // background: "linear-gradient(135deg,#1e1f6b,#3B3FB5)",
@@ -1036,7 +1043,7 @@ function ProductDetailsPage({ product }) {
                   gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
                   gap: 20
                 }}>
-                  {product.metrics.map((m, i) => (
+                  {currentProduct.metrics.map((m, i) => (
                     <div key={i} style={{
                       padding: 19,
                       borderRadius: 14,
@@ -1079,7 +1086,7 @@ function ProductDetailsPage({ product }) {
                   gap: 24
                 }}
               >
-                {product.features.map((f, i) => {
+                {currentProduct.features.map((f, i) => {
                   const Icon = f.icon;
 
                   return (
@@ -1091,7 +1098,7 @@ function ProductDetailsPage({ product }) {
                         alignItems: "flex-start",
                         paddingBottom: 20,
                         borderBottom:
-                          i !== product.features.length - 1
+                          i !== currentProduct.features.length - 1
                             ? "1px solid #e8eaf3"
                             : "none"
                       }}
