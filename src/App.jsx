@@ -1834,7 +1834,7 @@ function HomePage() {
             },
             {
               title: "Custom Software Development",
-              desc: "Tailor-made software solutions designed to address unique business requirements, improve operational efficiency, and support long-term business growth."
+              desc: "Custom made software solutions designed to address unique business requirements, improve operational efficiency, and support long-term business growth."
             },
             {
               title: "Business Intelligence",
@@ -2051,42 +2051,47 @@ const SERVICES = [
   {
     icon: Code,
     title: "Application Development",
-    desc: "We design and engineer high-performance, scalable web applications tailored to modern business needs. Leveraging technologies like React, Node.js, and Python, we build responsive and secure platforms that deliver seamless user experiences. From internal enterprise tools to customer-facing applications, our solutions are optimized for performance, reliability, and long-term scalability.",
+    desc: "We design  high-performance, scalable web applications tailored to modern business needs. Leveraging technologies like React, Node.js, and Python",
     tags: ["React", "Node.js", "Python", "Full-Stack"]
   },
 
   {
     icon: Database,
     title: "Data Engineering",
-    desc: "We build robust data infrastructures that enable organizations to collect, process, and manage large volumes of data efficiently. Our solutions include scalable data pipelines, ETL processes, API integrations, and optimized database architectures. We ensure data flows seamlessly across systems, enabling faster decision-making and reliable business operations.",
+    desc: "We build robust data infrastructures that enable organizations to collect, process, and manage large volumes of data efficiently.",
+    //  Our solutions include scalable data pipelines, ETL processes, API integrations, and optimized database architectures. We ensure data flows seamlessly across systems, enabling faster decision-making and reliable business operations.",
     tags: ["Data Pipelines", "ETL", "APIs", "Database Design"]
   },
 
   {
     icon: Cloud,
     title: "Cloud Deployment & DevOps",
-    desc: "We enable businesses to deploy, scale, and manage applications in the cloud with confidence. Our cloud solutions include infrastructure setup, CI/CD pipelines, performance monitoring, and cost optimization. We ensure your applications remain highly available, secure, and scalable under increasing workloads.",
+    desc: "Scalable cloud solutions that enable secure application deployment, efficient management, and reliable business operations.",
+    //  and cost optimization. We ensure your applications remain highly available, secure, and scalable under increasing workloads.",
     tags: ["Cloud Hosting", "CI/CD", "Scalability", "Monitoring"]
   },
 
   {
     icon: Brain, // 🔥 ADD THIS IMPORT FROM LUCIDE
     title: "AI & Intelligent Solutions",
-    desc: "We build AI-powered systems that transform raw data into actionable intelligence. From predictive analytics to intelligent automation, our solutions help businesses detect patterns, optimize operations, and make data-driven decisions. We integrate AI seamlessly into your applications to enhance efficiency, accuracy, and innovation.",
+    desc: "We build AI-powered systems that transform raw data into actionable intelligence. From predictive analytics to intelligent automation, our solutions help businesses detect patterns", 
+    // optimize operations, and make data-driven decisions. We integrate AI seamlessly into your applications to enhance efficiency, accuracy, and innovation.",
     tags: ["AI", "Machine Learning", "Automation", "Predictive Analytics"]
   },
 
   {
     icon: BarChart3, // 🔥 ADD THIS IMPORT FROM LUCIDE
     title: "Data Analytics & Visualization",
-    desc: "We transform complex data into meaningful insights through interactive dashboards and advanced analytics. Our solutions enable organizations to track performance, identify trends, and make strategic decisions with clarity. By combining analytics with intuitive visualizations, we empower teams to understand and act on their data effectively.",
+    desc: "We transform complex data into meaningful insights through interactive dashboards and advanced analytics. Our solutions enable organizations to track performance, identify trends",
+    //  and make strategic decisions with clarity. By combining analytics with intuitive visualizations, we empower teams to understand and act on their data effectively.",
     tags: ["Dashboards", "Analytics", "Visualization", "Insights"]
   },
 
   {
     icon: Repeat,
     title: "Application Maintenance & Support",
-    desc: "We provide continuous support and maintenance to ensure your applications remain secure, optimized, and up-to-date. From performance tuning and bug fixes to feature enhancements, we help your systems evolve alongside your business requirements without disruption.",
+    desc: "We provide continuous support and maintenance to ensure your applications remain secure, optimized, and up-to-date. From performance tuning and bug fixes to feature enhancements", 
+    // we help your systems evolve alongside your business requirements without disruption.",
     tags: ["Upgrades", "Bug Fixes", "Optimization", "Support"]
   }
 ];
