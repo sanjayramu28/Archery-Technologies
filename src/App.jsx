@@ -1208,10 +1208,18 @@ function ProductDetailsPage({ product }) {
 function ProductRoute() {
   const { slug } = useParams();
 
-  const product = PRODUCTS.find(p => p.slug === slug);
+  console.log("Slug:", slug);
+  console.log("Products:", PRODUCTS);
+  console.log(
+    "Found:",
+    PRODUCTS.find((p) => p.slug === slug)
+  );
+
+  const product = PRODUCTS.find((p) => p.slug === slug);
 
   return <ProductDetailsPage product={product} />;
 }
+
 function Navbar({ currentPage }) {
   const navigate = useNavigate();
   const [activeMenu, setActiveMenu] = useState(null);
