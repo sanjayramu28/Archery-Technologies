@@ -94,11 +94,11 @@ const GLOBAL_CSS = `
     position: relative;
     overflow: hidden;
   }
-  .page-hero::after {
-    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, transparent, #E53935 40%, #E53935 60%, transparent);
-    opacity: 0.7;
-  }
+  // .page-hero::after {
+  //   content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+  //   background: linear-gradient(90deg, transparent, #E53935 40%, #E53935 60%, transparent);
+  //   opacity: 0.7;
+  // }
   .page-hero h1 {
     font-family: 'Montserrat', sans-serif; font-weight: 800;
     font-size: clamp(28px, 5vw, 48px); color: #fff;
@@ -1777,10 +1777,10 @@ function HomePage() {
     });
   }, []);
   return (
-    <div className="fade-in">
+    <div className="fade-in ">
 
       {/* HERO */}
-      <section className="hero-premium">
+      <section className="hero-premium ">
 
         <div className="hero-container single">
 
