@@ -493,69 +493,69 @@ const PRODUCTS = [
   /* ───────────────────────────── */
   /* 5. FAULT DETECTION */
   /* ───────────────────────────── */
-  {
-    slug: "fault-detection-diagnosis",
-    icon: AlertCircle,
-    title: "Fault Detection & Diagnosis System",
-    category: "Monitoring",
-    short: "Real-time monitoring with manual control.",
-    desc: "System that detects abnormal conditions like temperature variations and alerts operators for manual intervention.",
+  // {
+  //   slug: "fault-detection-diagnosis",
+  //   icon: AlertCircle,
+  //   title: "Fault Detection & Diagnosis System",
+  //   category: "Monitoring",
+  //   short: "Real-time monitoring with manual control.",
+  //   desc: "System that detects abnormal conditions like temperature variations and alerts operators for manual intervention.",
 
-    details: [
-      {
-        content: "AI-Powered Fault Detection & Diagnostics (FDD) is an intelligent operations platform that continuously monitors connected IoT systems to identify equipment anomalies, operational faults, and performance deviations. By combining advanced AI models with rule-based diagnostics, the platform delivers actionable insights, predictive recommendations, and automated responses through secure API integrations. This enables organizations to optimize facility performance, improve equipment reliability, minimize operational disruptions, and drive proactive maintenance across critical infrastructure from a centralized, intelligent platform."
-      }
-    ],
+  //   details: [
+  //     {
+  //       content: "AI-Powered Fault Detection & Diagnostics (FDD) is an intelligent operations platform that continuously monitors connected IoT systems to identify equipment anomalies, operational faults, and performance deviations. By combining advanced AI models with rule-based diagnostics, the platform delivers actionable insights, predictive recommendations, and automated responses through secure API integrations. This enables organizations to optimize facility performance, improve equipment reliability, minimize operational disruptions, and drive proactive maintenance across critical infrastructure from a centralized, intelligent platform."
+  //     }
+  //   ],
 
-    features: [
-      {
-        name: "Intelligent Fault Detection",
-        icon: FaSearch,
-        desc: "Continuously identify equipment faults and operational abnormalities using AI-driven diagnostics and configurable detection rules."
-      },
-      {
-        name: "Automated Workflow Execution",
-        icon: FaRobot,
-        desc: "Execute predefined control actions and operational workflows through secure API integrations to accelerate issue resolution."
-      },
-      {
-        name: "Predictive Recommendations",
-        icon: FaBrain,
-        desc: "Deliver AI-powered recommendations that help operators optimize equipment performance and prevent potential operational disruptions."
-      },
-      {
-        name: "Operational Intelligence Dashboard",
-        icon: FaChartLine,
-        desc: "Monitor system health, fault events, equipment status, and performance trends through centralized dashboards and interactive analytics."
-      }
-    ],
+  //   features: [
+  //     {
+  //       name: "Intelligent Fault Detection",
+  //       icon: FaSearch,
+  //       desc: "Continuously identify equipment faults and operational abnormalities using AI-driven diagnostics and configurable detection rules."
+  //     },
+  //     {
+  //       name: "Automated Workflow Execution",
+  //       icon: FaRobot,
+  //       desc: "Execute predefined control actions and operational workflows through secure API integrations to accelerate issue resolution."
+  //     },
+  //     {
+  //       name: "Predictive Recommendations",
+  //       icon: FaBrain,
+  //       desc: "Deliver AI-powered recommendations that help operators optimize equipment performance and prevent potential operational disruptions."
+  //     },
+  //     {
+  //       name: "Operational Intelligence Dashboard",
+  //       icon: FaChartLine,
+  //       desc: "Monitor system health, fault events, equipment status, and performance trends through centralized dashboards and interactive analytics."
+  //     }
+  //   ],
 
-    metrics: [
-      { value: "60%+", label: "Reduction in Critical Failures" },
-      { value: "40%+", label: "Faster Issue Detection" },
-      { value: "35%+", label: "Improved System Monitoring" },
-      { value: "2X", label: "Response Time Improvement" }
-    ],
+  //   metrics: [
+  //     { value: "60%+", label: "Reduction in Critical Failures" },
+  //     { value: "40%+", label: "Faster Issue Detection" },
+  //     { value: "35%+", label: "Improved System Monitoring" },
+  //     { value: "2X", label: "Response Time Improvement" }
+  //   ],
 
-    highlights: [
-      { title: "Real-Time Monitoring", desc: "Continuous tracking of system conditions." },
-      { title: "Instant Alerts", desc: "Immediate notifications for abnormal events." },
-      { title: "Operator Control", desc: "Manual intervention with full visibility." }
-    ],
+  //   highlights: [
+  //     { title: "Real-Time Monitoring", desc: "Continuous tracking of system conditions." },
+  //     { title: "Instant Alerts", desc: "Immediate notifications for abnormal events." },
+  //     { title: "Operator Control", desc: "Manual intervention with full visibility." }
+  //   ],
 
-    steps: [
-      { title: "Monitor", desc: "Collect system data continuously." },
-      { title: "Detect", desc: "Identify abnormal conditions." },
-      { title: "Alert", desc: "Notify operators instantly." },
-      { title: "Respond", desc: "Manual corrective action taken." }
-    ],
+  //   steps: [
+  //     { title: "Monitor", desc: "Collect system data continuously." },
+  //     { title: "Detect", desc: "Identify abnormal conditions." },
+  //     { title: "Alert", desc: "Notify operators instantly." },
+  //     { title: "Respond", desc: "Manual corrective action taken." }
+  //   ],
 
-    // imaes: [
-    //   source = "../images/asset-dashboard.jpg"
-    // ],
-    useCases: ["Data Centers", "Manufacturing", "Server Rooms"],
-    tech: ["Node.js", "Monitoring Tools", "IoT Sensors"]
-  },
+  //   // imaes: [
+  //   //   source = "../images/asset-dashboard.jpg"
+  //   // ],
+  //   useCases: ["Data Centers", "Manufacturing", "Server Rooms"],
+  //   tech: ["Node.js", "Monitoring Tools", "IoT Sensors"]
+  // },
 
   /* ───────────────────────────── */
   /* 6. AI FAULT */
@@ -626,93 +626,93 @@ const PRODUCTS = [
   /* ───────────────────────────── */
   /* 7. GOOGLE ANALYTICS */
   /* ───────────────────────────── */
-  {
-    slug: "google-analytics",
-    icon: BarChart3,
-    title: "Google Analytics & Digital Intelligence ",
-    category: "Business Intelligence",
-    short: "Centralized energy monitoring and reporting platform powered by Google Looker Studio.",
-    desc: "A data-driven energy management solution that collects energy consumption data, processes key metrics, and visualizes performance through interactive Google Looker Studio dashboards.",
+  // {
+  //   slug: "google-analytics",
+  //   icon: BarChart3,
+  //   title: "Google Analytics & Digital Intelligence ",
+  //   category: "Business Intelligence",
+  //   short: "Centralized energy monitoring and reporting platform powered by Google Looker Studio.",
+  //   desc: "A data-driven energy management solution that collects energy consumption data, processes key metrics, and visualizes performance through interactive Google Looker Studio dashboards.",
 
-    details: [
-      {
-        content: "A business intelligence solution that visualizes energy consumption data through interactive Google Looker Studio dashboards."
-      },
-      {
-        content: "The platform enables KPI tracking, trend analysis, and reporting to support data-driven operational decisions."
-      }
-    ],
+  //   details: [
+  //     {
+  //       content: "A business intelligence solution that visualizes energy consumption data through interactive Google Looker Studio dashboards."
+  //     },
+  //     {
+  //       content: "The platform enables KPI tracking, trend analysis, and reporting to support data-driven operational decisions."
+  //     }
+  //   ],
 
-    features: [
-      { name: "Interactive Dashboards", icon: FaChartBar },
-      { name: "Data Integration", icon: FaDatabase },
-      { name: "KPI Monitoring", icon: FaChartLine },
-      { name: "Business Intelligence", icon: FaProjectDiagram }
-    ],
+  //   features: [
+  //     { name: "Interactive Dashboards", icon: FaChartBar },
+  //     { name: "Data Integration", icon: FaDatabase },
+  //     { name: "KPI Monitoring", icon: FaChartLine },
+  //     { name: "Business Intelligence", icon: FaProjectDiagram }
+  //   ],
 
-    metrics: [
-      { value: "100%", label: "Centralized Energy Data" },
-      { value: "24/7", label: "Dashboard Availability" },
-      { value: "Real-Time", label: "Performance Monitoring" },
-      { value: "Interactive", label: "Reporting & Insights" }
-    ],
+  //   metrics: [
+  //     { value: "100%", label: "Centralized Energy Data" },
+  //     { value: "24/7", label: "Dashboard Availability" },
+  //     { value: "Real-Time", label: "Performance Monitoring" },
+  //     { value: "Interactive", label: "Reporting & Insights" }
+  //   ],
 
-    highlights: [
-      {
-        title: "Energy Consumption Monitoring",
-        desc: "Track and analyze energy usage across multiple sources."
-      },
-      {
-        title: "Google Looker Studio Integration",
-        desc: "Visualize data through dynamic dashboards and reports."
-      },
-      {
-        title: "KPI & Trend Analysis",
-        desc: "Monitor key energy performance indicators and consumption trends."
-      },
-      {
-        title: "Automated Reporting",
-        desc: "Generate actionable insights through centralized reporting."
-      }
-    ],
+  //   highlights: [
+  //     {
+  //       title: "Energy Consumption Monitoring",
+  //       desc: "Track and analyze energy usage across multiple sources."
+  //     },
+  //     {
+  //       title: "Google Looker Studio Integration",
+  //       desc: "Visualize data through dynamic dashboards and reports."
+  //     },
+  //     {
+  //       title: "KPI & Trend Analysis",
+  //       desc: "Monitor key energy performance indicators and consumption trends."
+  //     },
+  //     {
+  //       title: "Automated Reporting",
+  //       desc: "Generate actionable insights through centralized reporting."
+  //     }
+  //   ],
 
-    steps: [
-      {
-        title: "Collect Data",
-        desc: "Gather energy consumption data from operational sources."
-      },
-      {
-        title: "Process & Transform",
-        desc: "Clean, structure, and prepare datasets for reporting."
-      },
-      {
-        title: "Push to Looker Studio",
-        desc: "Integrate processed data with Google Looker Studio."
-      },
-      {
-        title: "Visualize & Analyze",
-        desc: "Monitor KPIs, trends, and energy performance through dashboards."
-      }
-    ],
+  //   steps: [
+  //     {
+  //       title: "Collect Data",
+  //       desc: "Gather energy consumption data from operational sources."
+  //     },
+  //     {
+  //       title: "Process & Transform",
+  //       desc: "Clean, structure, and prepare datasets for reporting."
+  //     },
+  //     {
+  //       title: "Push to Looker Studio",
+  //       desc: "Integrate processed data with Google Looker Studio."
+  //     },
+  //     {
+  //       title: "Visualize & Analyze",
+  //       desc: "Monitor KPIs, trends, and energy performance through dashboards."
+  //     }
+  //   ],
 
 
 
-    useCases: [
-      "Energy Consumption Monitoring",
-      "Utility Usage Analysis",
-      "Operational Performance Tracking",
-      "Sustainability Reporting",
-      "Management Dashboards"
-    ],
+  //   useCases: [
+  //     "Energy Consumption Monitoring",
+  //     "Utility Usage Analysis",
+  //     "Operational Performance Tracking",
+  //     "Sustainability Reporting",
+  //     "Management Dashboards"
+  //   ],
 
-    tech: [
-      "Google Looker Studio",
-      "Google Sheets / Data Connectors",
-      "REST APIs",
-      "Data Processing Pipelines",
-      "Business Intelligence Reporting"
-    ]
-  }
+  //   tech: [
+  //     "Google Looker Studio",
+  //     "Google Sheets / Data Connectors",
+  //     "REST APIs",
+  //     "Data Processing Pipelines",
+  //     "Business Intelligence Reporting"
+  //   ]
+  // }
 ];
 
 function ProductsPage() {
@@ -943,9 +943,9 @@ function ProductDetailsPage({ product }) {
   const location = useLocation();
   const { slug } = useParams();
   // console.log(slug)
-    const currentProduct = product || PRODUCTS.find((prod) => prod.slug === slug);
+  const currentProduct = product || PRODUCTS.find((prod) => prod.slug === slug);
 
-  
+
   if (!currentProduct) {
     return <div>Product not found</div>;
   }
@@ -1819,28 +1819,28 @@ function HomePage() {
 
       <section className="home-section">
 
-        <h2 className="section-title">What We Build</h2>
+        <h2 className="section-title">Transforming Business Through Technology</h2>
 
         <div className="impact-grid">
 
           {[
-  {
-    title: "Enterprise Applications",
-    desc: "Custom web and enterprise applications that automate business operations, improve productivity, and support digital transformation."
-  },
-  {
-    title: "AI & Machine Learning Solutions",
-    desc: "Intelligent applications powered by artificial intelligence, predictive analytics, computer vision, and automation."
-  },
-  {
-    title: "Cloud & IoT Platforms",
-    desc: "Scalable cloud-native and IoT solutions for real-time monitoring, connected devices, and centralized management."
-  },
-  {
-    title: "Business Intelligence",
-    desc: "Interactive dashboards, analytics platforms, and reporting solutions that turn business data into actionable insights."
-  }
-].map((item, i) => (
+            {
+              title: "Enterprise Applications",
+              desc: "Custom web and enterprise applications that automate business operations, improve productivity, and support digital transformation."
+            },
+            {
+              title: "AI & Machine Learning Solutions",
+              desc: "Intelligent applications powered by artificial intelligence, predictive analytics, computer vision, and automation."
+            },
+            {
+              title: "Custom Software Development",
+              desc: "Tailor-made software solutions designed to address unique business requirements, improve operational efficiency, and support long-term business growth."
+            },
+            {
+              title: "Business Intelligence",
+              desc: "Interactive dashboards, analytics platforms, and reporting solutions that turn business data into actionable insights."
+            }
+          ].map((item, i) => (
             <div key={i} className="impact-card">
               <h2>{item.value}</h2>
               <h3>{item.title}</h3>
@@ -1852,29 +1852,25 @@ function HomePage() {
 
       </section>
       {/* WHY */}
-      <section className="why-section">
+      {/* <section className="why-section">
         <div className="container">
           <h2 className="section-title">Technology Expertise</h2>
 
           <div className="why-grid">
             {[
-  {
-    title: "Frontend Development",
-    desc: "Modern, responsive web applications built with React, Angular, and contemporary UI technologies."
-  },
-  {
-    title: "Backend Development",
-    desc: "Secure APIs and scalable backend systems using Node.js, Python, Java, and cloud-native architectures."
-  },
-  {
-    title: "Artificial Intelligence",
-    desc: "Machine learning, computer vision, predictive analytics, and intelligent automation solutions."
-  },
-  {
-    title: "Cloud & DevOps",
-    desc: "Deployment, infrastructure, CI/CD pipelines, AWS cloud services, containers, and scalable cloud environments."
-  }
-].map((item, i) => (
+              {
+                title: "Full-Stack  Development",
+                desc: "End-to-end design and development of scalable web applications, enterprise platforms, and business software tailored to organizational needs."
+              },             
+              {
+                title: "Artificial Intelligence",
+                desc: "AI-powered solutions including machine learning, computer vision, predictive analytics, and intelligent business automation."
+              },
+              {
+                title: "Cloud & DevOps",
+                desc: "Cloud deployment, infrastructure management, CI/CD automation, and scalable application hosting using modern cloud technologies."
+              }
+            ].map((item, i) => (
               <div key={i} className="why-card">
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
@@ -1882,31 +1878,31 @@ function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       {/* PROCESS */}
-      <section className="process-section">
+      {/* <section className="process-section">
         <div className="container">
           <h2 className="section-title">Solutions We Provide</h2>
 
           <div className="process-grid">
             {[
-  {
-    title: "Digital Transformation",
-    desc: "Modernizing business processes through custom software, automation, and cloud technologies."
-  },
-  {
-    title: "Enterprise Automation",
-    desc: "Workflow automation, operational monitoring, and intelligent systems that improve efficiency."
-  },
-  {
-    title: "Smart Infrastructure",
-    desc: "IoT-enabled monitoring platforms for energy management, asset tracking, and occupancy intelligence."
-  },
-  {
-    title: "Data & Analytics",
-    desc: "Business intelligence platforms that deliver real-time dashboards, reporting, and performance insights."
-  }
-].map((p, i) => (
+              {
+                title: "Digital Transformation",
+                desc: "Modernizing business processes through custom software, automation, and cloud technologies."
+              },
+              {
+                title: "Enterprise Automation",
+                desc: "Workflow automation, operational monitoring, and intelligent systems that improve efficiency."
+              },
+              {
+                title: "Smart Infrastructure",
+                desc: "IoT-enabled monitoring platforms for energy management, asset tracking, and occupancy intelligence."
+              },
+              {
+                title: "Data & Analytics",
+                desc: "Business intelligence platforms that deliver real-time dashboards, reporting, and performance insights."
+              }
+            ].map((p, i) => (
               <div key={i} className="process-card">
                 <div className="step">{p.step}</div>
                 <h4>{p.title}</h4>
@@ -1915,7 +1911,7 @@ function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="home-section">
 
