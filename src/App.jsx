@@ -1147,9 +1147,9 @@ function ProductDetailsPage({ product }) {
             </div>
           </section>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-5  ms-5 " style={{marginTop:"70px"}}>
           {/* <p>hhj</p> */}
-          <img src={currentProduct.Flowimg} className="img-fluid"/>
+          <img src={currentProduct.Flowimg} className="img-fluid h-75" style={{width:"900px"}}/>
         </div>
         {/* <div className="col-md-6">
           <img src="../src/images/asset-dashboard.jpg" style={{width:"400px",height:"400px"}}/>
