@@ -276,7 +276,7 @@ const PRODUCTS = [
       { title: "Analyze", desc: "Generate insights from usage." },
       { title: "Optimize", desc: "Improve efficiency and reduce cost." }
     ],
-
+Flowimg:"/assetManagement.png",
     // features: [
     //   { name: "Real-Time Tracking", icon: "⚙️" },
     //   { name: "Predictive Analytics", icon: "📊" },
@@ -338,7 +338,7 @@ const PRODUCTS = [
         desc: "Automatically unlock meeting rooms after successful identity verification, eliminating manual access and improving security."
       }
     ],
-
+Flowimg:"/SmartMeetingRoom.png",
     metrics: [
       { value: "52%", label: "Room Utilization Increase" },
       { value: "30%", label: "Time Saved" },
@@ -425,7 +425,7 @@ const PRODUCTS = [
       { title: "Optimize", desc: "Reduce waste." }
     ],
 
-
+Flowimg:"/EnergyManagement.png",
     useCases: ["Buildings", "Factories"],
     tech: ["Python", "IoT", "AWS"]
   },
@@ -484,7 +484,7 @@ const PRODUCTS = [
       { title: "Analyze", desc: "Insights generation." }
     ],
 
-
+Flowimg:"/OccupancyIntelligence.png",
 
     useCases: ["Retail", "Airports"],
     tech: ["AI", "OpenCV"]
@@ -603,7 +603,7 @@ const PRODUCTS = [
       { value: "45%+", label: "Increase in System Stability" },
       { value: "2.5X", label: "Faster Automated Response" }
     ],
-
+Flowimg:"/AIFDD.png",
     highlights: [
       { title: "Predictive Intelligence", desc: "Anticipates failures before they occur." },
       { title: "Automated Control", desc: "Adjusts temperature and system conditions automatically." },
@@ -1146,6 +1146,10 @@ function ProductDetailsPage({ product }) {
               </div>
             </div>
           </section>
+        </div>
+        <div className="col-md-6">
+          {/* <p>hhj</p> */}
+          <img src={currentProduct.Flowimg} className="img-fluid"/>
         </div>
         {/* <div className="col-md-6">
           <img src="../src/images/asset-dashboard.jpg" style={{width:"400px",height:"400px"}}/>
