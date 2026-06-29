@@ -973,6 +973,100 @@ body {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
 }
 
+
+.premium-switch{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+
+    width:fit-content;
+
+    margin:auto;
+
+    padding:6px;
+
+    background:#f6f7fb;
+
+    border:1px solid #e8ecff;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 8px 30px rgba(17,24,39,.06),
+        inset 0 1px 2px rgba(255,255,255,.9);
+
+}
+
+.premium-switch button{
+
+    border:none;
+
+    background:transparent;
+
+    color:#5f677b;
+
+    border-radius:14px;
+
+    padding:12px 22px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    min-width:170px;
+
+    justify-content:center;
+
+}
+
+.premium-switch button i{
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.premium-switch button:hover{
+
+    color:#3B3FB5;
+
+}
+
+.premium-switch button:hover i{
+
+    transform:scale(1.15);
+
+}
+
+.premium-switch button.active{
+
+    background:white;
+
+    color:#3B3FB5;
+
+    box-shadow:
+        0 8px 18px rgba(59,63,181,.18);
+
+}
+
+.premium-switch button.active i{
+
+    transform:rotate(-10deg) scale(1.15);
+
+}
 /* Responsive adjustments for premium animations */
 @media (max-width: 768px) {
   .product-card-premium .product-card-inner {

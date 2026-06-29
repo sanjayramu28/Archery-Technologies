@@ -36,7 +36,12 @@ import {
   FaSearch,
   FaBuilding,
   FaTachometerAlt,
-  FaExchangeAlt
+  FaExchangeAlt,
+  FaGlobe,
+  FaCloudUploadAlt,
+  FaUserCheck,
+  FaKey,
+  FaSlidersH
 } from "react-icons/fa";
 import './App.css'
 import { Routes, Route, useNavigate, useParams, useLocation } from "react-router-dom";
@@ -199,7 +204,7 @@ const NAV_LINKS = [
       { label: "Energy Management", page: "/products/energy-management-application" },
       { label: "Occupancy Intelligence", page: "/products/people-counting-application" },
       // { label: "FDD", page: "/products/fault-detection-diagnosis" },
-      { label: "FDD Using AI", page: "/products/ai-based-fault-detection-diagnosis" },
+      // { label: "FDD Using AI", page: "/products/ai-based-fault-detection-diagnosis" },
       // { label: "Google Analytics", page: "/products/google-analytics" },
     ]
   },
@@ -223,69 +228,150 @@ const PRODUCTS = [
   {
     slug: "asset-management-application",
     icon: Archive,
-    title: "Asset Management ",
+    title: "Asset Management",
     category: "Core Platform",
-    short: "Enterprise-grade platform for managing asset lifecycle.",
-    desc: "Comprehensive enterprise solution for complete visibility and control over organizational assets.",
+    short: "Enterprise-grade platform for managing the complete asset lifecycle.",
+    desc: "Centralized asset lifecycle management available as both an On-Premises deployment and a Cloud Platform (AWS) solution.",
 
-    details: [
-      {
-        content: "Asset Management solution provides a centralized platform to track, manage, and optimize physical, IT, and operational assets throughout their entire lifecycle. By connecting asset information, maintenance activities and operational insights, organizations can improve asset utilization, reduce operational costs, minimize downtime, and make informed business decisions."
+    Flowimg: "/assetManagement.png",
+
+    deployment: {
+      onPrem: {
+        title: "Asset Management",
+
+        desc:
+          "Manage enterprise assets securely within your organization's infrastructure while maintaining complete ownership of operational data and integrations.",
+
+        details: [
+          {
+            content:
+              "The On-Premises Asset Management solution provides a centralized platform to track, manage, and optimize physical, IT, and operational assets throughout their lifecycle. By integrating asset information, maintenance records, and operational insights, organizations gain complete visibility while keeping all business data inside their own infrastructure."
+          }
+        ],
+
+        metrics: [
+          {
+            value: "48%",
+            label: "Downtime Reduction"
+          },
+          {
+            value: "35%",
+            label: "Operational Cost Reduction"
+          },
+          {
+            value: "2.3X",
+            label: "Asset Visibility"
+          },
+          {
+            value: "60%",
+            label: "Maintenance Efficiency"
+          }
+        ],
+
+        features: [
+          {
+            name: "Asset Tracking",
+            icon: FaBoxes,
+            desc:
+              "Track asset ownership, lifecycle, status, and complete history from procurement to retirement."
+          },
+          {
+            name: "Maintenance Management",
+            icon: FaTools,
+            desc:
+              "Schedule preventive and corrective maintenance to improve equipment reliability and reduce downtime."
+          },
+          {
+            name: "Asset Analytics",
+            icon: FaChartLine,
+            desc:
+              "Generate dashboards and reports that provide actionable insights into utilization, maintenance trends, and operational efficiency."
+          },
+          {
+            name: "Location Tracking",
+            icon: FaMapMarkedAlt,
+            desc:
+              "Track assets across multiple facilities, departments, and locations with complete movement history."
+          }
+        ]
+      },
+
+      cloud: {
+        title: " Asset Management Cloud",
+
+        desc:
+          "Manage enterprise assets through a secure AWS-hosted cloud platform with anywhere access, centralized monitoring, and automatic infrastructure management.",
+
+        details: [
+          {
+            content:
+              "The Cloud Platform extends traditional asset management with secure remote accessibility, centralized monitoring, automatic backups, disaster recovery, and highly scalable cloud infrastructure. Teams can securely manage enterprise assets from anywhere while reducing IT administration and infrastructure costs."
+          }
+        ],
+
+        metrics: [
+          {
+            value: "99.9%",
+            label: "Platform Availability"
+          },
+          {
+            value: "45%",
+            label: "Infrastructure Cost Reduction"
+          },
+          {
+            value: "3X",
+            label: "Deployment Speed"
+          },
+          {
+            value: "70%",
+            label: "Reduced IT Administration"
+          }
+        ],
+
+        features: [
+          {
+            name: "Cloud Asset Repository",
+            icon: FaBoxes,
+            desc:
+              "Store and manage enterprise assets securely on AWS with centralized access and real-time synchronization."
+          },
+          {
+            name: "Anywhere Access",
+            icon: FaGlobe,
+            desc:
+              "Securely access asset information from any location using role-based authentication."
+          },
+          {
+            name: "Cloud Analytics",
+            icon: FaChartLine,
+            desc:
+              "Monitor asset performance, maintenance trends, and operational KPIs through cloud-powered dashboards."
+          },
+          {
+            name: "Automated Backup & Recovery",
+            icon: FaCloudUploadAlt,
+            desc:
+              "Protect business-critical asset information with automated backups and disaster recovery."
+          }
+        ]
       }
+    },
+
+    useCases: [
+      "Manufacturing",
+      "Healthcare",
+      "Retail",
+      "Logistics",
+      "Enterprise IT"
     ],
 
-    features: [
-      {
-        name: "Asset Tracking",
-        icon: FaBoxes,
-        desc: "Maintain complete visibility of asset information, ownership, status, and lifecycle from acquisition to retirement through a centralized asset repository."
-      },
-      {
-        name: "Analytics",
-        icon: FaChartLine,
-        desc: "Gain actionable insights with dashboards and reports to monitor asset performance, utilization, maintenance trends, and operational efficiency."
-      },
-      {
-        name: "Maintenance Management",
-        icon: FaTools,
-        desc: "Plan and manage preventive and corrective maintenance to reduce downtime, extend asset lifespan, and improve service reliability."
-      },
-      {
-        name: "Location Tracking",
-        icon: FaMapMarkedAlt,
-        desc: "Maintain accurate records of asset locations across facilities and departments to simplify asset allocation, transfers, and inventory audits."
-      }
-    ],
-
-    metrics: [
-      { value: "48%", label: "Downtime Reduction" },
-      { value: "35%", label: "Cost Optimization" },
-      { value: "2.3X", label: "Asset Visibility Increase" },
-      { value: "60%", label: "Maintenance Efficiency" }
-    ],
-
-    highlights: [
-      { title: "Lifecycle Intelligence", desc: "Track assets from procurement to retirement." },
-      { title: "Predictive Maintenance", desc: "Prevent failures before they occur." },
-      { title: "Enterprise Scalability", desc: "Supports multi-location deployments." }
-    ],
-
-    steps: [
-      { title: "Capture", desc: "Register all assets digitally." },
-      { title: "Track", desc: "Monitor assets in real time." },
-      { title: "Analyze", desc: "Generate insights from usage." },
-      { title: "Optimize", desc: "Improve efficiency and reduce cost." }
-    ],
-Flowimg:"/assetManagement.png",
-    // features: [
-    //   { name: "Real-Time Tracking", icon: "⚙️" },
-    //   { name: "Predictive Analytics", icon: "📊" },
-    //   { name: "Maintenance Scheduling", icon: "⏰" },
-    //   { name: "Multi-Location Support", icon: "🌍" }
-    // ],
-
-    useCases: ["Enterprise", "Manufacturing", "Healthcare", "Retail"],
-    tech: ["React", "Node.js", "AWS"]
+    tech: [
+      "React",
+      "Node.js",
+      "REST APIs",
+      "SQL",
+      "AWS"
+    ]
   },
 
   /* ───────────────────────────── */
@@ -296,77 +382,161 @@ Flowimg:"/assetManagement.png",
     icon: Users,
     title: "Smart Meeting Room",
     category: "Smart Workplace",
-    short: "Smart automation for meeting rooms.",
-    desc: "Intelligent platform to optimize workspace collaboration.",
+    short: "Intelligent meeting room booking, access, and workspace automation.",
+    desc: "Smart meeting room platform available as both an On-Premises deployment and a Cloud Platform (AWS) solution.",
 
-    details: [
-      {
-        content: "Simplify meeting room management with seamless Outlook Calendar integration and secure facial recognition access. Automatically verify meeting organizers and grant authorized room entry, creating a smarter, more secure, and efficient workplace.It improves room utilization, eliminates scheduling conflicts, and provides real-time visibility into workspace usage."
+    Flowimg: "/SmartMeetingRoom.png",
+
+    deployment: {
+      onPrem: {
+        title: "Smart Meeting Room",
+
+        desc:
+          "Deploy the meeting room platform within your organization's infrastructure for secure room booking, access control, and workplace automation.",
+
+        details: [
+          {
+            content:
+              "The On-Premises Smart Meeting Room solution integrates with Microsoft Outlook Calendar, facial recognition systems, and enterprise access control to simplify meeting room scheduling and secure entry. By operating entirely within the organization's infrastructure, it ensures maximum data privacy while improving workspace utilization and collaboration."
+          }
+        ],
+
+        metrics: [
+          {
+            value: "52%",
+            label: "Room Utilization Increase"
+          },
+          {
+            value: "30%",
+            label: "Time Saved"
+          },
+          {
+            value: "27%",
+            label: "Productivity Boost"
+          },
+          {
+            value: "2X",
+            label: "Booking Efficiency"
+          }
+        ],
+
+        features: [
+          {
+            name: "Outlook Calendar Integration",
+            icon: FaCalendarAlt,
+            desc:
+              "Synchronize meeting schedules directly with Microsoft Outlook Calendar for seamless room booking."
+          },
+          {
+            name: "Facial Recognition Access",
+            icon: FaUserCheck,
+            desc:
+              "Authenticate meeting organizers using facial recognition for secure and contactless room access."
+          },
+          {
+            name: "Access Control",
+            icon: FaDoorOpen,
+            desc:
+              "Automatically grant room access only to authorized meeting participants."
+          },
+          {
+            name: "Meeting Room Display",
+            icon: FaUsers,
+            desc:
+              "Display live room schedules, organizer information, and room availability."
+          },
+          {
+            name: "Automated Room Access",
+            icon: FaKey,
+            desc:
+              "Unlock meeting rooms automatically after successful identity verification."
+          }
+        ]
       },
-      // {
-      //   content: "An intelligent meeting room solution that simplifies room booking, scheduling, and workspace management through automation."
-      // },
-      {
-        content: ""
+
+      cloud: {
+        title: " Smart Meeting Room Cloud ",
+
+        desc:
+          "Manage meeting rooms from anywhere using a secure AWS-hosted platform with centralized scheduling, monitoring, analytics, and remote administration.",
+
+        details: [
+          {
+            content:
+              "The Cloud Platform extends meeting room management with centralized administration, remote access, real-time synchronization across multiple office locations, cloud analytics, automated backups, and scalable infrastructure. Organizations can manage distributed workplaces efficiently through a single platform."
+          }
+        ],
+
+        metrics: [
+          {
+            value: "99.9%",
+            label: "Cloud Availability"
+          },
+          {
+            value: "40%",
+            label: "Administrative Time Reduction"
+          },
+          {
+            value: "3X",
+            label: "Deployment Speed"
+          },
+          {
+            value: "65%",
+            label: "Workspace Visibility"
+          }
+        ],
+
+        features: [
+          {
+            name: "Centralized Room Management",
+            icon: FaBuilding,
+            desc:
+              "Manage meeting rooms across multiple office locations from a single cloud platform."
+          },
+          {
+            name: "Cloud Calendar Sync",
+            icon: FaCalendarAlt,
+            desc:
+              "Synchronize bookings instantly across all connected workplaces."
+          },
+          {
+            name: "Workspace Analytics",
+            icon: FaChartLine,
+            desc:
+              "Analyze room utilization, booking trends, occupancy, and workspace efficiency."
+          },
+          {
+            name: "Remote Administration",
+            icon: FaGlobe,
+            desc:
+              "Monitor and manage meeting room operations securely from anywhere."
+          },
+          {
+            name: "Automatic Backup & Recovery",
+            icon: FaCloudUploadAlt,
+            desc:
+              "Protect booking history and configuration with automated cloud backups."
+          }
+        ]
       }
+    },
+
+    useCases: [
+      "Corporate Offices",
+      "Hybrid Workplaces",
+      "Enterprise Campuses",
+      "Technology Parks",
+      "Government Offices"
     ],
 
-    features: [
-      {
-        name: "Outlook Calendar Integration",
-        icon: FaCalendarAlt,
-        desc: "Synchronize meeting schedules directly with Microsoft Outlook Calendar for seamless room booking and automated schedule updates."
-      },
-      {
-        name: "Facial Recognition Access",
-        icon: FaExclamationTriangle,
-        desc: "Authenticate meeting organizers using facial recognition to provide secure, contactless, and authorized room access."
-      },
-      {
-        name: "Access Control",
-        icon: FaDoorOpen,
-        desc: "Enable secure room access and automated check-ins for scheduled meetings."
-      },
-      {
-        name: "Meeting Room Display",
-        icon: FaUsers,
-        desc: "Display real-time meeting schedules, room availability, organizer details, and upcoming bookings on dedicated room panels."
-      },
-      {
-        name: "Automated Room Access",
-        icon: FaChartBar,
-        desc: "Automatically unlock meeting rooms after successful identity verification, eliminating manual access and improving security."
-      }
-    ],
-Flowimg:"/SmartMeetingRoom.png",
-    metrics: [
-      { value: "52%", label: "Room Utilization Increase" },
-      { value: "30%", label: "Time Saved" },
-      { value: "27%", label: "Productivity Boost" },
-      { value: "2X", label: "Booking Efficiency" }
-    ],
-
-    highlights: [
-      { title: "Smart Scheduling", desc: "Automated room booking." },
-      { title: "Real-Time Visibility", desc: "Instant availability tracking." }
-    ],
-
-    steps: [
-      { title: "Search", desc: "Find rooms instantly." },
-      { title: "Book", desc: "Reserve with one click." },
-      { title: "Access", desc: "Auto entry enabled." },
-      { title: "Optimize", desc: "Analyze usage patterns." }
-    ],
-
-    // features: [
-    //   { name: "Smart Booking", icon: "📅" },
-    //   { name: "Calendar Integration", icon: "🔗" },
-    //   { name: "Occupancy Tracking", icon: "👥" },
-    //   { name: "Analytics Dashboard", icon: "📈" }
-    // ],
-
-    useCases: ["Corporate Offices", "Hybrid Workspaces"],
-    tech: ["React", "IoT", "Azure"]
+    tech: [
+      "React",
+      "Node.js",
+      "AWS",
+      "Microsoft Outlook",
+      "Facial Recognition",
+      "REST APIs"
+    ]
   },
 
   /* ───────────────────────────── */
@@ -375,59 +545,356 @@ Flowimg:"/SmartMeetingRoom.png",
   {
     slug: "energy-management-application",
     icon: BatteryCharging,
-    title: "Energy Management ",
-    category: "Core Platform",
-    short: "Energy monitoring and optimization.",
-    desc: "Platform to monitor and optimize energy consumption.",
+    title: "Energy Intelligence Platform",
+    category: "Smart Energy",
+    short: "Energy analytics and AI-driven fault detection platform.",
+    desc: "Unified platform for energy optimization and AI-powered fault detection available as both On-Premises and Cloud Platform deployments.",
 
-    details: [
-      {
-        content: "Our Energy Management platform provides a centralized solution for collecting, visualizing, and analyzing energy data from diverse enterprise systems and connected infrastructure. With interactive dashboards, advanced analytics, and AI-powered intelligence, organizations can uncover consumption patterns, identify operational anomalies, and make informed decisions that optimize energy performance."
+    Flowimg: "/EnergyManagement.png",
+
+    deployment: {
+
+      // ===========================
+      // ON-PREMISES
+      // ===========================
+
+      onPrem: {
+
+        energy: {
+
+          title: "Energy Intelligence",
+
+          desc:
+            "Monitor and optimize enterprise energy consumption entirely within your organization's infrastructure.",
+
+          details: [
+            {
+              content:
+                "Our Energy Management platform provides a centralized solution for collecting, visualizing, and analyzing energy data from diverse enterprise systems and connected infrastructure. With interactive dashboards, advanced analytics, and AI-powered intelligence, organizations can uncover consumption patterns, identify operational anomalies, and make informed decisions that optimize energy performance."
+            }
+          ],
+
+          metrics: [
+            { value: "42%", label: "Energy Savings" },
+            { value: "28%", label: "Cost Reduction" },
+            { value: "65%", label: "Efficiency Improvement" },
+            { value: "24/7", label: "Real-Time Monitoring" }
+          ],
+
+          features: [
+            {
+              name: "Interactive Dashboards",
+              icon: FaBolt,
+              desc: "Monitor real-time energy usage through interactive dashboards and reports."
+            },
+            {
+              name: "Energy Analytics",
+              icon: FaChartLine,
+              desc: "Analyze historical energy trends and identify optimization opportunities."
+            },
+            {
+              name: "AI Anomaly Detection",
+              icon: FaLeaf,
+              desc: "Automatically detect abnormal energy consumption patterns."
+            },
+            {
+              name: "Custom Reports",
+              icon: FaChartBar,
+              desc: "Generate configurable reports for energy analysis and compliance."
+            }
+          ]
+
+        },
+
+        fdd: {
+
+          title: "AI Fault Detection & Diagnosis",
+
+          desc:
+            "Continuously monitor equipment using AI models to detect operational anomalies before failures occur.",
+
+          details: [
+            {
+              content:
+                "The On-Premises AI Fault Detection & Diagnosis platform analyzes sensor data from HVAC systems, chillers, AHUs, pumps, and other connected equipment to detect abnormal operating conditions, predict failures, and provide actionable maintenance recommendations."
+            }
+          ],
+
+          metrics: [
+            { value: "70%+", label: "Failure Prevention" },
+            { value: "55%+", label: "Reduced Overheating" },
+            { value: "45%+", label: "Improved Stability" },
+            { value: "2.5X", label: "Response Speed" }
+          ],
+
+          features: [
+            {
+              name: "Fault Detection",
+              icon: FaSearch,
+              desc: "Identify abnormal equipment behavior using AI-powered diagnostics."
+            },
+            {
+              name: "Predictive Maintenance",
+              icon: FaBrain,
+              desc: "Predict equipment failures before they impact operations."
+            },
+            {
+              name: "Automated Recommendations",
+              icon: FaRobot,
+              desc: "Receive AI-generated recommendations for corrective actions."
+            },
+            {
+              name: "Operational Dashboard",
+              icon: FaChartLine,
+              desc: "Monitor equipment health through centralized dashboards."
+            }
+          ]
+
+        },
+        ruleFdd: {
+
+          title: "Rule-Based Fault Detection & Diagnosis",
+
+          desc:
+            "Detect equipment faults using predefined engineering rules and business logic without relying on artificial intelligence models.",
+
+          details: [
+            {
+              content:
+                "The Rule-Based Fault Detection & Diagnosis platform continuously evaluates equipment performance using predefined thresholds, SQL rules, logical conditions, and engineering best practices. By applying deterministic IF-THEN decision logic, the system identifies abnormal operating conditions, generates alerts, and recommends corrective actions without requiring machine learning models."
+            }
+          ],
+
+          metrics: [
+            {
+              value: "99%",
+              label: "Rule Accuracy"
+            },
+            {
+              value: "45%",
+              label: "Reduced Manual Monitoring"
+            },
+            {
+              value: "24/7",
+              label: "Continuous Evaluation"
+            },
+            {
+              value: "<1 sec",
+              label: "Rule Execution"
+            }
+          ],
+
+          features: [
+            {
+              name: "Rule Engine",
+              icon: FaProjectDiagram,
+              desc:
+                "Evaluate equipment conditions using configurable engineering rules and business logic."
+            },
+            {
+              name: "Threshold Monitoring",
+              icon: FaSlidersH,
+              desc:
+                "Compare sensor values against predefined thresholds to identify abnormal behavior."
+            },
+            {
+              name: "SQL-Based Logic",
+              icon: FaDatabase,
+              desc:
+                "Execute SQL procedures and conditional statements to determine equipment health."
+            },
+            {
+              name: "Real-Time Alerts",
+              icon: FaBell,
+              desc:
+                "Generate immediate alerts whenever rule conditions indicate potential faults."
+            }
+          ]
+
+        },
+
+      },
+
+      // ===========================
+      // CLOUD
+      // ===========================
+
+      cloud: {
+
+        energy: {
+
+          title: " Energy Intelligence Cloud",
+
+          desc:
+            "A cloud-native energy intelligence platform hosted on AWS, enabling secure access, centralized monitoring, and scalable energy management from anywhere.",
+
+          details: [
+            {
+              content:
+                "Cloud Energy Intelligence transforms traditional energy management into a scalable, cloud-hosted platform. By deploying the solution on AWS, organizations can securely monitor energy consumption, visualize operational data through interactive dashboards, generate advanced reports, and access insights from anywhere. The platform eliminates on-premise infrastructure limitations while delivering high availability, centralized management, and simplified maintenance."
+            }
+          ],
+
+          metrics: [
+            { value: "99.9%", label: "Platform Availability" },
+            { value: "42%", label: "Energy Savings" },
+            { value: "28%", label: "Operational Cost Reduction" },
+            { value: "24/7", label: "Secure Remote Access" }
+          ],
+
+          features: [
+            {
+              name: "Cloud-Hosted Dashboards",
+              icon: FaBolt,
+              desc: "Access real-time energy dashboards securely from anywhere through the cloud."
+            },
+            {
+              name: "Centralized Energy Analytics",
+              icon: FaChartLine,
+              desc: "Monitor and analyze energy performance across one or multiple facilities from a unified platform."
+            },
+            {
+              name: "Secure Anywhere Access",
+              icon: FaGlobe,
+              desc: "Enable authorized users to access energy insights remotely with role-based authentication."
+            },
+            {
+              name: "Scalable Cloud Infrastructure",
+              icon: FaCloudUploadAlt,
+              desc: "Leverage AWS infrastructure for high availability, automatic scalability, and simplified system management."
+            }
+          ]
+
+        },
+
+        fdd: {
+
+          title: " AI Fault Detection Cloud",
+
+          desc:
+            "AI-powered cloud platform for predictive equipment monitoring across multiple facilities.",
+
+          details: [
+            {
+              content:
+                "The Cloud AI FDD platform continuously analyzes IoT sensor data across multiple sites using cloud AI models. It predicts equipment failures, detects anomalies, generates recommendations, and delivers centralized monitoring through AWS."
+            }
+          ],
+
+          metrics: [
+            { value: "99.9%", label: "Cloud Availability" },
+            { value: "80%", label: "Faster Detection" },
+            { value: "50%", label: "Maintenance Reduction" },
+            { value: "3X", label: "Operational Visibility" }
+          ],
+
+          features: [
+            {
+              name: "AI Fault Analytics",
+              icon: FaSearch,
+              desc: "Analyze enterprise equipment using cloud-based AI diagnostics."
+            },
+            {
+              name: "Predictive Intelligence",
+              icon: FaBrain,
+              desc: "Predict failures across all connected facilities."
+            },
+            {
+              name: "Automated Workflow",
+              icon: FaRobot,
+              desc: "Trigger alerts and workflows automatically."
+            },
+            {
+              name: "Cloud Monitoring",
+              icon: FaChartLine,
+              desc: "Centralized dashboards for all equipment health."
+            }
+          ]
+
+        },
+        ruleFdd: {
+
+          title: "Rule-Based Fault Detection Cloud",
+
+          desc:
+            "Cloud-hosted rule engine for monitoring enterprise equipment using configurable business rules and engineering logic.",
+
+          details: [
+            {
+              content:
+                "The Cloud Rule-Based FDD platform centralizes rule execution across multiple facilities. Equipment data is evaluated using predefined SQL procedures, logical conditions, and engineering thresholds while providing centralized dashboards, remote monitoring, and cloud scalability."
+            }
+          ],
+
+          metrics: [
+            {
+              value: "99.9%",
+              label: "Platform Availability"
+            },
+            {
+              value: "50%",
+              label: "Operational Visibility"
+            },
+            {
+              value: "3X",
+              label: "Deployment Speed"
+            },
+            {
+              value: "24/7",
+              label: "Cloud Monitoring"
+            }
+          ],
+
+          features: [
+            {
+              name: "Centralized Rule Engine",
+              icon: FaProjectDiagram,
+              desc:
+                "Manage engineering rules centrally across multiple facilities."
+            },
+            {
+              name: "Cloud Rule Execution",
+              icon: FaDatabase,
+              desc:
+                "Execute SQL procedures and business logic securely on cloud infrastructure."
+            },
+            {
+              name: "Threshold Analytics",
+              icon: FaSlidersH,
+              desc:
+                "Monitor operational parameters using configurable engineering thresholds."
+            },
+            {
+              name: "Enterprise Alerts",
+              icon: FaBell,
+              desc:
+                "Receive real-time notifications whenever configured rules detect abnormal conditions."
+            }
+          ]
+
+        },
+
       }
+
+    },
+
+    useCases: [
+      "Commercial Buildings",
+      "Industrial Plants",
+      "Hospitals",
+      "Data Centers",
+      "Manufacturing",
+      "Smart Cities"
     ],
 
-    features: [
-      {
-        name: "Interactive Dashboards",
-        icon: FaBolt,
-        desc: "Visualize energy consumption through dynamic dashboards, charts, and reports for real-time monitoring and analysis."
-      },
-      {
-        name: "Energy Analytics",
-        icon: FaChartLine,
-        desc: "Analyze consumption trends, compare historical performance, and identify opportunities to improve operational efficiency."
-      },
-      {
-        name: "AI Anomaly Detection",
-        icon: FaLeaf,
-        desc: "Leverage AI to detect abnormal energy usage, identify suspicious consumption patterns, and generate proactive alerts."
-      },
-      {
-        name: "Custom Reports",
-        icon: FaChartBar,
-        desc: "Generate detailed energy reports with configurable filters and visualizations to support business and sustainability decisions."
-      }
-    ],
-
-    metrics: [
-      { value: "42%", label: "Energy Savings" },
-      { value: "28%", label: "Cost Reduction" },
-      { value: "65%", label: "Efficiency Improvement" }
-    ],
-
-    highlights: [
-      { title: "Real-Time Monitoring", desc: "Track usage instantly." }
-    ],
-
-    steps: [
-      { title: "Monitor", desc: "Track energy usage." },
-      { title: "Analyze", desc: "Identify inefficiencies." },
-      { title: "Optimize", desc: "Reduce waste." }
-    ],
-
-Flowimg:"/EnergyManagement.png",
-    useCases: ["Buildings", "Factories"],
-    tech: ["Python", "IoT", "AWS"]
+    tech: [
+      "React",
+      "Node.js",
+      "Python",
+      "AWS",
+      "IoT",
+      "Machine Learning"
+    ]
   },
 
   /* ───────────────────────────── */
@@ -436,58 +903,153 @@ Flowimg:"/EnergyManagement.png",
   {
     slug: "people-counting-application",
     icon: Users,
-    title: "Occupancy Intelligence ",
+    title: "Occupancy Intelligence",
     category: "AI Vision",
-    short: "AI-powered people analytics.",
-    desc: "Track and analyze human movement patterns.",
+    short: "AI-powered occupancy monitoring and workspace intelligence platform.",
+    desc: "Monitor occupancy, people movement, and space utilization through On-Premises or Cloud Platform deployments.",
 
-    details: [
-      {
-        content: "Occupancy Intelligence platform collects and analyzes sensor-generated occupancy data from buildings, floors, facilities, and individual spaces to deliver a comprehensive view of people movement and space utilization. Through interactive dashboards, advanced analytics, and historical trend analysis, organizations gain actionable insights into occupancy patterns, utilization rates, and operational performance."
+    Flowimg: "/OccupancyIntelligence.png",
+
+    deployment: {
+      onPrem: {
+        title: "Occupancy Intelligence",
+
+        desc:
+          "Monitor occupancy, people movement, and workspace utilization securely within your organization's infrastructure.",
+
+        details: [
+          {
+            content:
+              "The On-Premises Occupancy Intelligence platform collects and analyzes occupancy data from AI cameras and IoT sensors installed across buildings, floors, meeting rooms, and workspaces. Organizations gain real-time visibility into occupancy trends while ensuring all operational data remains within their own infrastructure."
+          }
+        ],
+
+        metrics: [
+          {
+            value: "95%",
+            label: "Detection Accuracy"
+          },
+          {
+            value: "40%",
+            label: "Space Utilization Improvement"
+          },
+          {
+            value: "30%",
+            label: "Operational Efficiency"
+          },
+          {
+            value: "24/7",
+            label: "Real-Time Monitoring"
+          }
+        ],
+
+        features: [
+          {
+            name: "Space Utilization Analytics",
+            icon: FaBuilding,
+            desc:
+              "Analyze occupancy trends to optimize workspace planning and facility utilization."
+          },
+          {
+            name: "Occupancy Analytics",
+            icon: FaChartLine,
+            desc:
+              "Monitor historical occupancy trends and compare utilization across buildings and departments."
+          },
+          {
+            name: "Interactive Dashboards",
+            icon: FaTachometerAlt,
+            desc:
+              "Visualize occupancy metrics through real-time dashboards, charts, and reports."
+          },
+          {
+            name: "In & Out Count Analysis",
+            icon: FaExchangeAlt,
+            desc:
+              "Track entry and exit counts to understand occupancy flow and visitor patterns."
+          }
+        ]
+      },
+
+      cloud: {
+        title: "Occupancy Intelligence Cloud",
+
+        desc:
+          "Monitor occupancy across multiple facilities using a secure AWS-hosted cloud platform with centralized dashboards and analytics.",
+
+        details: [
+          {
+            content:
+              "The Cloud Occupancy Intelligence platform consolidates occupancy data from multiple locations into a centralized dashboard. Organizations benefit from remote monitoring, enterprise-wide analytics, automated reporting, and highly scalable cloud infrastructure."
+          }
+        ],
+
+        metrics: [
+          {
+            value: "99.9%",
+            label: "Platform Availability"
+          },
+          {
+            value: "50%",
+            label: "Facility Visibility"
+          },
+          {
+            value: "3X",
+            label: "Deployment Speed"
+          },
+          {
+            value: "70%",
+            label: "Reporting Efficiency"
+          }
+        ],
+
+        features: [
+          {
+            name: "Centralized Occupancy Monitoring",
+            icon: FaBuilding,
+            desc:
+              "Monitor occupancy across multiple buildings from one centralized cloud dashboard."
+          },
+          {
+            name: "Cloud Analytics",
+            icon: FaChartLine,
+            desc:
+              "Analyze occupancy trends and utilization using cloud-powered analytics."
+          },
+          {
+            name: "Remote Monitoring",
+            icon: FaGlobe,
+            desc:
+              "Securely access occupancy dashboards from anywhere through role-based authentication."
+          },
+          {
+            name: "Automated Backup & Recovery",
+            icon: FaCloudUploadAlt,
+            desc:
+              "Protect occupancy data with automated cloud backups and disaster recovery."
+          }
+        ]
       }
+    },
+
+    useCases: [
+      "Corporate Offices",
+      "Commercial Buildings",
+      "Retail Stores",
+      "Hospitals",
+      "Educational Campuses",
+      "Airports"
     ],
 
-    features: [
-      {
-        name: "Space Utilization Analytics",
-        icon: FaBuilding,
-        desc: "Analyze occupancy trends and utilization patterns to optimize workspace planning and operational efficiency."
-      },
-      {
-        name: "Energy Analytics",
-        icon: FaChartLine,
-        desc: "Analyze consumption trends, compare historical performance, and identify opportunities to improve operational efficiency."
-      },
-      {
-        name: "Interactive Dashboards",
-        icon: FaTachometerAlt,
-        desc: "Visualize occupancy metrics through dynamic dashboards, charts, and reports for real-time operational visibility."
-      },
-      {
-        name: "In & Out Count Analysis",
-        icon: FaExchangeAlt,
-        desc: "Track entry and exit counts to understand occupancy flow, peak usage periods, and space utilization trends."
-      }
-    ],
-    metrics: [
-      { value: "95%", label: "Accuracy" },
-      { value: "40%", label: "Efficiency Improvement" }
-    ],
-
-    highlights: [
-      { title: "Real-Time Tracking", desc: "Monitor movement live." }
-    ],
-
-    steps: [
-      { title: "Capture", desc: "Video input." },
-      { title: "Detect", desc: "AI detection." },
-      { title: "Analyze", desc: "Insights generation." }
-    ],
-
-Flowimg:"/OccupancyIntelligence.png",
-
-    useCases: ["Retail", "Airports"],
-    tech: ["AI", "OpenCV"]
+    tech: [
+      "React",
+      "Python",
+      "OpenCV",
+      "AI",
+      "IoT",
+      "AWS",
+      "REST APIs"
+    ]
   },
 
   /* ───────────────────────────── */
@@ -560,68 +1122,68 @@ Flowimg:"/OccupancyIntelligence.png",
   /* ───────────────────────────── */
   /* 6. AI FAULT */
   /* ───────────────────────────── */
-  {
-    slug: "ai-based-fault-detection-diagnosis",
-    icon: Brain,
-    title: "AI-Based Fault Detection & Diagnosis ",
-    category: "AI Automation",
-    short: "Predictive fault detection with automated system optimization.",
-    desc: "AI-driven system that predicts failures and dynamically adjusts operating conditions such as temperature for optimal performance.",
+  // {
+  //   slug: "ai-based-fault-detection-diagnosis",
+  //   icon: Brain,
+  //   title: "AI-Based Fault Detection & Diagnosis ",
+  //   category: "AI Automation",
+  //   short: "Predictive fault detection with automated system optimization.",
+  //   desc: "AI-driven system that predicts failures and dynamically adjusts operating conditions such as temperature for optimal performance.",
 
-    details: [
-      {
-        content: "AI-Powered Fault Detection & Diagnostics (FDD) is an intelligent operations platform that continuously monitors connected IoT systems to identify equipment anomalies, operational faults, and performance deviations. By combining advanced AI models with rule-based diagnostics, the platform delivers actionable insights, predictive recommendations, and automated responses through secure API integrations. This enables organizations to optimize facility performance, improve equipment reliability, minimize operational disruptions, and drive proactive maintenance across critical infrastructure from a centralized, intelligent platform."
-      }
-    ],
+  //   details: [
+  //     {
+  //       content: "AI-Powered Fault Detection & Diagnostics (FDD) is an intelligent operations platform that continuously monitors connected IoT systems to identify equipment anomalies, operational faults, and performance deviations. By combining advanced AI models with rule-based diagnostics, the platform delivers actionable insights, predictive recommendations, and automated responses through secure API integrations. This enables organizations to optimize facility performance, improve equipment reliability, minimize operational disruptions, and drive proactive maintenance across critical infrastructure from a centralized, intelligent platform."
+  //     }
+  //   ],
 
-    features: [
-      {
-        name: "Intelligent Fault Detection",
-        icon: FaSearch,
-        desc: "Continuously identify equipment faults and operational abnormalities using AI-driven diagnostics and configurable detection rules."
-      },
-      {
-        name: "Automated Workflow Execution",
-        icon: FaRobot,
-        desc: "Execute predefined control actions and operational workflows through secure API integrations to accelerate issue resolution."
-      },
-      {
-        name: "Predictive Recommendations",
-        icon: FaBrain,
-        desc: "Deliver AI-powered recommendations that help operators optimize equipment performance and prevent potential operational disruptions."
-      },
-      {
-        name: "Operational Intelligence Dashboard",
-        icon: FaChartLine,
-        desc: "Monitor system health, fault events, equipment status, and performance trends through centralized dashboards and interactive analytics."
-      }
-    ],
+  //   features: [
+  //     {
+  //       name: "Intelligent Fault Detection",
+  //       icon: FaSearch,
+  //       desc: "Continuously identify equipment faults and operational abnormalities using AI-driven diagnostics and configurable detection rules."
+  //     },
+  //     {
+  //       name: "Automated Workflow Execution",
+  //       icon: FaRobot,
+  //       desc: "Execute predefined control actions and operational workflows through secure API integrations to accelerate issue resolution."
+  //     },
+  //     {
+  //       name: "Predictive Recommendations",
+  //       icon: FaBrain,
+  //       desc: "Deliver AI-powered recommendations that help operators optimize equipment performance and prevent potential operational disruptions."
+  //     },
+  //     {
+  //       name: "Operational Intelligence Dashboard",
+  //       icon: FaChartLine,
+  //       desc: "Monitor system health, fault events, equipment status, and performance trends through centralized dashboards and interactive analytics."
+  //     }
+  //   ],
 
-    metrics: [
-      { value: "70%+", label: "Failure Prevention Rate" },
-      { value: "55%+", label: "Reduction in Overheating Issues" },
-      { value: "45%+", label: "Increase in System Stability" },
-      { value: "2.5X", label: "Faster Automated Response" }
-    ],
-Flowimg:"/AIFDD.png",
-    highlights: [
-      { title: "Predictive Intelligence", desc: "Anticipates failures before they occur." },
-      { title: "Automated Control", desc: "Adjusts temperature and system conditions automatically." },
-      { title: "Self-Optimizing Systems", desc: "Continuously maintains optimal performance." }
-    ],
+  //   metrics: [
+  //     { value: "70%+", label: "Failure Prevention Rate" },
+  //     { value: "55%+", label: "Reduction in Overheating Issues" },
+  //     { value: "45%+", label: "Increase in System Stability" },
+  //     { value: "2.5X", label: "Faster Automated Response" }
+  //   ],
+  //   Flowimg: "/AIFDD.png",
+  //   highlights: [
+  //     { title: "Predictive Intelligence", desc: "Anticipates failures before they occur." },
+  //     { title: "Automated Control", desc: "Adjusts temperature and system conditions automatically." },
+  //     { title: "Self-Optimizing Systems", desc: "Continuously maintains optimal performance." }
+  //   ],
 
-    steps: [
-      { title: "Monitor", desc: "Collect real-time sensor data (temperature, load)." },
-      { title: "Predict", desc: "AI models analyze patterns and detect risks." },
-      { title: "Decide", desc: "System determines optimal corrective action." },
-      { title: "Act", desc: "Automatically adjusts environment and operations." }
-    ],
+  //   steps: [
+  //     { title: "Monitor", desc: "Collect real-time sensor data (temperature, load)." },
+  //     { title: "Predict", desc: "AI models analyze patterns and detect risks." },
+  //     { title: "Decide", desc: "System determines optimal corrective action." },
+  //     { title: "Act", desc: "Automatically adjusts environment and operations." }
+  //   ],
 
 
 
-    useCases: ["Data Centers", "Industrial Equipment", "Energy Systems"],
-    tech: ["Machine Learning", "IoT Sensors", "Python", "Cloud AI"]
-  },
+  //   useCases: ["Data Centers", "Industrial Equipment", "Energy Systems"],
+  //   tech: ["Machine Learning", "IoT Sensors", "Python", "Cloud AI"]
+  // },
 
   /* ───────────────────────────── */
   /* 7. GOOGLE ANALYTICS */
@@ -868,7 +1430,7 @@ function ProductsPage() {
                   paddingTop: 20,
                   borderTop: "1px solid rgba(59, 63, 181, 0.1)"
                 }}>
-                  {p.metrics.slice(0, 2).map((m, i) => (
+                  {(p.deployment?.onPrem?.metrics || []).slice(0, 2).map((m, i) => (
                     <div key={i}>
                       <div style={{
                         fontFamily: "'Montserrat',sans-serif",
@@ -944,6 +1506,22 @@ function ProductDetailsPage({ product }) {
   const { slug } = useParams();
   // console.log(slug)
   const currentProduct = product || PRODUCTS.find((prod) => prod.slug === slug);
+  const [deployment, setDeployment] = useState("onPrem");
+  const [solution, setSolution] = useState("energy");
+
+  if (!currentProduct) {
+    return <div>Product not found</div>;
+  }
+
+  const deploymentData = currentProduct.deployment[deployment];
+
+  // Only Energy page has energy/fdd
+  const hasSolutions =
+    deploymentData.energy !== undefined;
+
+  const currentContent = hasSolutions
+    ? deploymentData[solution]
+    : deploymentData;
 
 
   if (!currentProduct) {
@@ -978,6 +1556,11 @@ function ProductDetailsPage({ product }) {
     transition: "all 0.25s ease"
   };
 
+  useEffect(() => {
+    if (solution === "ruleFdd") {
+        setDeployment("onPrem");
+    }
+}, [solution]);
   return (
     <div className="fade-in">
 
@@ -989,7 +1572,7 @@ function ProductDetailsPage({ product }) {
         textAlign: "center"
       }}>
         <h1 style={{ fontSize: "clamp(36px,6vw,56px)", fontWeight: 800 }}>
-          {currentProduct.title}
+          {currentContent.title}
         </h1>
 
         <p style={{
@@ -999,10 +1582,76 @@ function ProductDetailsPage({ product }) {
           lineHeight: 1.8,
           fontSize: 16
         }}>
-          {currentProduct.desc}
+          {currentContent.desc}
         </p>
       </section>
+      <div className="premium-switch">
 
+        <button
+          className={deployment === "onPrem" ? "active" : ""}
+          onClick={() => {
+            setDeployment("onPrem");
+            if (hasSolutions) setSolution("energy");
+          }}
+        >
+          <i className="fas fa-server"></i>
+          <span>On-Premises</span>
+        </button>
+
+        {/* <button
+          className={`${deployment === "cloud" ? "active" : ""} ${solution=='ruleFdd'?"button-disabled":""}`}
+          onClick={() => {
+            setDeployment("cloud");
+            if (hasSolutions) setSolution("energy");
+          }}
+        >
+          <i className="fas fa-cloud"></i>
+          <span>Cloud Platform</span>
+        </button> */}
+{solution !== "ruleFdd" && (
+  <button
+    className={deployment === "cloud" ? "active" : ""}
+    disabled={solution === "ruleFdd"}
+    onClick={() => {
+        if (solution === "ruleFdd") return;
+
+        setDeployment("cloud");
+        if (hasSolutions) setSolution("energy");
+    }}
+>
+    Cloud Platform
+</button>
+)}
+      </div>
+
+      {hasSolutions && (
+
+        <div className="premium-switch mt-4">
+
+          <button
+            className={solution === "energy" ? "active" : ""}
+            onClick={() => setSolution("energy")}
+          >
+            <i className="fas fa-bolt"></i>
+            <span>Energy</span>
+          </button>
+
+          <button
+            className={solution === "fdd" ? "active" : ""}
+            onClick={() => setSolution("fdd")}
+          >
+            <i className="fas fa-brain"></i>
+            <span>AI FDD</span>
+          </button>
+          <button
+            className={solution === "ruleFdd" ? "active" : ""}
+            onClick={() => setSolution("ruleFdd")}
+          >
+            Rule-Based FDD
+          </button>
+        </div>
+
+      )}
       {/* OVERVIEW (PARAGRAPH STYLE) */}
       <div className="row ">
         <div className="col-md-6">
@@ -1015,7 +1664,7 @@ function ProductDetailsPage({ product }) {
               Overview
             </h2>
 
-            {currentProduct.details.map((d, i) => (
+            {currentContent.details.map((d, i) => (
               <p key={i} style={{
                 marginBottom: 20,
                 lineHeight: 1.9,
@@ -1029,7 +1678,7 @@ function ProductDetailsPage({ product }) {
         </div>
         <div className="col-md-6">
           {/* METRICS */}
-          {currentProduct.metrics && (
+          {currentContent.metrics && (
             <section className="reveal-premium" style={{
               padding: "0px 24px",
               // background: "linear-gradient(135deg,#1e1f6b,#3B3FB5)",
@@ -1043,7 +1692,7 @@ function ProductDetailsPage({ product }) {
                   gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
                   gap: 20
                 }}>
-                  {currentProduct.metrics.map((m, i) => (
+                  {currentContent.metrics.map((m, i) => (
                     <div key={i} style={{
                       padding: 19,
                       borderRadius: 14,
@@ -1086,7 +1735,7 @@ function ProductDetailsPage({ product }) {
                   gap: 24
                 }}
               >
-                {currentProduct.features.map((f, i) => {
+                {currentContent.features.map((f, i) => {
                   const Icon = f.icon;
 
                   return (
@@ -1098,7 +1747,7 @@ function ProductDetailsPage({ product }) {
                         alignItems: "flex-start",
                         paddingBottom: 20,
                         borderBottom:
-                          i !== currentProduct.features.length - 1
+                          i !== currentContent.features.length - 1
                             ? "1px solid #e8eaf3"
                             : "none"
                       }}
@@ -1147,63 +1796,19 @@ function ProductDetailsPage({ product }) {
             </div>
           </section>
         </div>
-        <div className="col-md-5  ms-5 " style={{marginTop:"70px"}}>
+        <div className="col-md-5  ms-5 " style={{ marginTop: "70px" }}>
           {/* <p>hhj</p> */}
-          <img src={currentProduct.Flowimg} className="img-fluid h-75" style={{width:"900px"}}/>
+          {/* <img src={currentContent.Flowimg} className="img-fluid h-75" style={{ width: "900px" }} /> */}
+          <img
+            src={currentProduct.Flowimg}
+            className="img-fluid h-75"
+            style={{ width: "900px" }}
+          />
         </div>
         {/* <div className="col-md-6">
           <img src="../src/images/asset-dashboard.jpg" style={{width:"400px",height:"400px"}}/>
         </div> */}
       </div>
-      {/* USE CASES */}
-      {/* <section className="reveal-premium" style={{ padding: "50px 24px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 className="section-title" style={{ marginBottom: 40 }}>
-            Use Cases
-          </h2>
-
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
-            gap: 20
-          }}>
-            {product.useCases.map((u, i) => (
-              <div key={i} style={CARD}>
-                {u}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* TECH STACK */}
-      {/* <section className="reveal-premium" style={{ padding: "50px 24px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
-          <h2 className="section-title" style={{ marginBottom: 40 }}>
-            Technology Stack
-          </h2>
-
-          <div style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 12,
-            justifyContent: "center"
-          }}>
-            {product.tech.map((t, i) => (
-              <div key={i} style={{
-                padding: "10px 18px",
-                borderRadius: 30,
-                background: "#eef0fb",
-                color: "#3B3FB5",
-                fontWeight: 600,
-                fontSize: 13
-              }}>
-                {t}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
     </div>
   );
@@ -2078,7 +2683,7 @@ const SERVICES = [
   {
     icon: Brain, // 🔥 ADD THIS IMPORT FROM LUCIDE
     title: "AI & Intelligent Solutions",
-    desc: "We build AI-powered systems that transform raw data into actionable intelligence. From predictive analytics to intelligent automation, our solutions help businesses detect patterns", 
+    desc: "We build AI-powered systems that transform raw data into actionable intelligence. From predictive analytics to intelligent automation, our solutions help businesses detect patterns",
     // optimize operations, and make data-driven decisions. We integrate AI seamlessly into your applications to enhance efficiency, accuracy, and innovation.",
     tags: ["AI", "Machine Learning", "Automation", "Predictive Analytics"]
   },
@@ -2094,7 +2699,7 @@ const SERVICES = [
   {
     icon: Repeat,
     title: "Application Maintenance & Support",
-    desc: "We provide continuous support and maintenance to ensure your applications remain secure, optimized, and up-to-date. From performance tuning and bug fixes to feature enhancements", 
+    desc: "We provide continuous support and maintenance to ensure your applications remain secure, optimized, and up-to-date. From performance tuning and bug fixes to feature enhancements",
     // we help your systems evolve alongside your business requirements without disruption.",
     tags: ["Upgrades", "Bug Fixes", "Optimization", "Support"]
   }
