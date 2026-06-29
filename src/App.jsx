@@ -1555,14 +1555,14 @@ function ProductDetailsPage({ product }) {
     boxShadow: "0 10px 30px rgba(59,63,181,0.12)",
     transition: "all 0.25s ease"
   };
-useEffect(()=>{
-setDeployment("onPrem");
-},[slug])
+  useEffect(() => {
+    setDeployment("onPrem");
+  }, [slug])
   useEffect(() => {
     if (solution === "ruleFdd") {
-        setDeployment("onPrem");
+      setDeployment("onPrem");
     }
-}, [solution]);
+  }, [solution]);
   return (
     <div className="fade-in">
 
@@ -1610,20 +1610,20 @@ setDeployment("onPrem");
           <i className="fas fa-cloud"></i>
           <span>Cloud Platform</span>
         </button> */}
-{solution !== "ruleFdd" && (
-  <button
-    className={deployment === "cloud" ? "active" : ""}
-    disabled={solution === "ruleFdd"}
-    onClick={() => {
-        if (solution === "ruleFdd") return;
+        {solution !== "ruleFdd" && (
+          <button
+            className={deployment === "cloud" ? "active" : ""}
+            disabled={solution === "ruleFdd"}
+            onClick={() => {
+              if (solution === "ruleFdd") return;
 
-        setDeployment("cloud");
-        if (hasSolutions) setSolution("energy");
-    }}
->
-    Cloud Platform
-</button>
-)}
+              setDeployment("cloud");
+              if (hasSolutions) setSolution("energy");
+            }}
+          >
+            Cloud Platform
+          </button>
+        )}
       </div>
 
       {hasSolutions && (
@@ -1645,12 +1645,14 @@ setDeployment("onPrem");
             <i className="fas fa-brain"></i>
             <span>AI FDD</span>
           </button>
+          {deployment!="cloud"&&
           <button
             className={solution === "ruleFdd" ? "active" : ""}
             onClick={() => setSolution("ruleFdd")}
           >
             Rule-Based FDD
           </button>
+}
         </div>
 
       )}
