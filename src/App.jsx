@@ -1555,7 +1555,9 @@ function ProductDetailsPage({ product }) {
     boxShadow: "0 10px 30px rgba(59,63,181,0.12)",
     transition: "all 0.25s ease"
   };
-
+useEffect(()=>{
+setDeployment("onPrem");
+},[slug])
   useEffect(() => {
     if (solution === "ruleFdd") {
         setDeployment("onPrem");
